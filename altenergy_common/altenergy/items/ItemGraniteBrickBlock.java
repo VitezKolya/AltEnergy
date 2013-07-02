@@ -24,6 +24,7 @@ public class ItemGraniteBrickBlock extends ItemBlock {
 		return "";
 	}
 
+	@Override
 	public int getMetadata(int meta) {
 		return meta;
 	}

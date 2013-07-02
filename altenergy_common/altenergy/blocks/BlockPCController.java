@@ -22,15 +22,10 @@ public class BlockPCController extends BlockMachine {
 	};
 
 	/*
-	 * - Generator platform - 9 : 40 
-	 * - Generator Cap - 8 : 40
-	 * - Generator Support Frame - 7 : 12
-	 * - Core Supports - 6 : 28
-	 * - Core Platform - 5 : 1
-	 * - Core Cap - 4 : 1
-	 * - Regulator - 3 : 1 - Can be placed anywhere
-	 * - Controller - ComputerCraft Enabled - 1 : 1
-	 * - Emergency Vent - 2 : 1
+	 * - Generator platform - 9 : 40 - Generator Cap - 8 : 40 - Generator
+	 * Support Frame - 7 : 12 - Core Supports - 6 : 28 - Core Platform - 5 : 1 -
+	 * Core Cap - 4 : 1 - Regulator - 3 : 1 - Can be placed anywhere -
+	 * Controller - ComputerCraft Enabled - 1 : 1 - Emergency Vent - 2 : 1
 	 */
 
 	static int pattern[][][] = {
@@ -178,7 +173,7 @@ public class BlockPCController extends BlockMachine {
 					int modX = localX + x;
 					int modY = localY + y;
 					int modZ = localZ + z;
-					int id = world.getBlockId(modX, modY, modZ);
+					world.getBlockId(modX, modY, modZ);
 
 				}
 			}

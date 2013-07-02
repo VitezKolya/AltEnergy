@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 import altenergy.AltEnergy;
+import altenergy.common.BlockAE;
 import altenergy.configuration.ConfigurationSettings;
 import altenergy.items.ModItems;
 import altenergy.lib.ItemIds;

@@ -1,25 +1,25 @@
-package altenergy.items;
+package altenergy.common;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.Item;
 import altenergy.AltEnergy;
 import altenergy.lib.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemAE extends Item {
+public class BlockAE extends Block {
 
-	public ItemAE(int id) {
-		super(id - Reference.SHIFTED_ID_RANGE_CORRECTION);
-		maxStackSize = 1;
+	public BlockAE(int id, Material material) {
+		super(id, material);
 		this.setCreativeTab(AltEnergy.tabsAE);
-		setNoRepair();
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister iconRegister) {
-		itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":"
+	public void registerIcons(IconRegister register) {
+
+		register.registerIcon(Reference.MOD_ID + ":"
 				+ this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
 	}
 }
