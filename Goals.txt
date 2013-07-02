@@ -1,0 +1,157 @@
+
+Granite - The world gen version
+Granite - What drops from the mined WG version
+Granite Panel
+Granite Collumm
+Granite Collumm Base
+Granite Collumm Cap
+Granite Inset
+Granite Bricks
+Granite Tile
+Granite Stairs
+Granite halfblock
+Granite Inscriptibed
+
+Tech Wall base
+Tech Wall 1
+Tech Wall 2
+Tech Floor 1
+Tech Floor 2
+Tech Ceiling 1
+Tech Ceiling 2
+
+Strange Crystal
+Strange Crystal Dust
+Power Crystal
+Quortz dust
+Diamond Dust
+tiny Diamond Dust
+
+Crystal Prossessor
+Crystal Data Storage
+Crystal Circuit Board
+Pattern Crystal
+Bio Sensor - Hooks into door controller
+Network Id Circuit - Imprint it at the Main computer then place it into an machine to connect it to the network
+
+Multi-block power generator - enough to overpower the entire server 5x5x7?
+ - Generator platform					 - P : 40
+ - Generator Cap						 - A : 40
+ - Generator Support Frame				 - F : 12
+ - Core Supports						 - S : 28
+ - Core Platform						 - T : 1
+ - Core Cap                      	     - E : 1
+ - Regulator			  				 - R : 1
+ - Controller - ComputerCraft Enabled	 - C : 1
+ - Emergency Vent						 - V : 1
+ 
+1
+ p p p p p
+ p p p p p
+ p p R p p
+ p p p p p
+ p p p p p
+2
+ p p p p p
+ p S S S p
+ p S T S p
+ p S S S p
+ p p C p p
+3
+ F       F
+   S   S
+ 
+   S   S
+ F       F
+4
+ F       F
+   S   S
+ 
+   S   S
+ F       F
+
+ F       F
+   S   S
+5
+   S   S
+ F       F
+6
+ A A A A A
+ A S S S A
+ A S E S A
+ A S S S A
+ A A A A A
+ 
+ A A A A A
+ A A A A A
+ A A V A A
+ A A A A A
+ A A A A A
+ 
+Multi-block Power Storage Unit 3x3x5
+ - SU plateform
+ - SU Cap
+ - SU Support Frame
+ - Regulator
+ - Controller - ComputerCraft Enabled
+
+Multi-block door - 2x1, 2x2, 2x3
+ - Door frame
+ - Door
+ - Renforced Door
+ - Blast Door
+ - Controller - ComputerCraft Enabled
+
+Multi-block Matter Forge - 5x6x4
+ - MF frame
+ - MF Power Regulator - Requires Large Power Cable or Utility cable
+ - MF Energy Focis
+ - MF Pattern Storage
+ - MF Controller
+ - MF Item Output - get a better name
+
+Multi-block Main Computer
+ - MC frame
+ - MC Power Regulator
+ - MC Core
+ - MC Holographic Interface
+ - MC Data Connection - Needs better name
+ 
+Power Cable - Large, Small
+Data Cable - ComputerCraft Enabled
+Utility Cable - Large Power Cable + Data cable, This cable can only go in one direction.
+Junction Box - to redirect Utility cable
+Electric Smelter
+Grinder - can be powered by diffrent things, flowing water(Need water turbine), Electrity (Electric Motor)
+Infuser - creates crystal prossessors, data storage crystal, crystal circuit board
+Sub Infuser - creates power crystals, Needs better name
+
+Power Controller - turns off from a redpower signal/ or lack there for of. ComputerCraft Enabled. Can be used in place of a Junction Box.
+
+Sensor Box - Connects to a network
+Lighting wall - Requires floor
+Lighting Ceiling  - Requires floor
+Lighting Floor - Requires floor
+
+
+
+System:
+
+
+granite:
+meta data
+0 - Granite - The world gen version
+1 - Granite - What drops from the mined WG version
+2 - Granite Bricks
+3 - Granite Panel
+4 - Granite Tile
+5 - Granite Inset
+6 - Granite Collumm
+7 - Granite Collumm Base
+8 - Granite Collumm Cap
+9 - Granite Inscriptibed
+
+
+Granite Stairs
+Granite halfblock
+Granite doublehalfblock
