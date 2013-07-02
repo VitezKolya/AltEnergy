@@ -37,8 +37,7 @@ Network Id Circuit - Imprint it at the Main computer then place it into an machi
 Multi-block power generator - enough to overpower the entire server 5x5x7?
  - Generator platform					 - P : 40
  - Generator Cap						 - A : 40
- - Generator Support Frame				 - F : 12
- - Core Supports						 - S : 28
+ - Core Supports						 - S : 18
  - Core Platform						 - T : 1
  - Core Cap                      	     - E : 1
  - Regulator			  				 - R : 1
@@ -58,23 +57,23 @@ Multi-block power generator - enough to overpower the entire server 5x5x7?
  p S S S p
  p p C p p
 3
- F       F
-   S   S
+          
+        
  
-   S   S
- F       F
+        
+          
 4
- F       F
-   S   S
+          
+        
  
-   S   S
- F       F
+        
+          
 
- F       F
-   S   S
+          
+        
 5
-   S   S
- F       F
+        
+          
 6
  A A A A A
  A S S S A
@@ -91,7 +90,7 @@ Multi-block power generator - enough to overpower the entire server 5x5x7?
 Multi-block Power Storage Unit 3x3x5
  - SU plateform
  - SU Cap
- - SU Support Frame
+ - Support Frame
  - Regulator
  - Controller - ComputerCraft Enabled
 

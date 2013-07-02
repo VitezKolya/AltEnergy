@@ -5,8 +5,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import altenergy.tileentity.TE_PCController;
 
-public class BlockPCController extends BlockMachine {
-
+public class BlockGeneratorCoreCap extends BlockMachine{
 	static boolean debugMerge = false;
 
 	static final int mergedBit = 0x8;
@@ -128,7 +127,7 @@ public class BlockPCController extends BlockMachine {
 			},
 	};
 
-	protected BlockPCController(int id) {
+	protected BlockGeneratorCoreCap(int id) {
 		super(id, Material.iron);
 		// TODO Auto-generated constructor stub
 	}
@@ -189,5 +188,4 @@ public class BlockPCController extends BlockMachine {
 		// TODO Auto-generated method stub
 
 	}
-
 }
