@@ -1,5 +1,5 @@
 package altenergy.blocks;
 
-public class BlockStorageController extends BlockController{
-	
+public class BlockStorageController extends BlockController {
+
 }

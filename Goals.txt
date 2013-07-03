@@ -43,49 +43,49 @@ Multi-block power generator - enough to overpower the entire server 5x5x7?
  - Regulator			  				 - R : 1
  - Controller - ComputerCraft Enabled	 - C : 1
  - Emergency Vent						 - V : 1
- 
-1
- p p p p p
- p p p p p
- p p R p p
- p p p p p
- p p p p p
-2
- p p p p p
- p S S S p
- p S T S p
- p S S S p
- p p C p p
-3
-          
-        
- 
-        
-          
-4
-          
-        
- 
-        
-          
+{
+{{T,T,T,T,T},
+{T,T,T,T,T},
+{A,A,A,A,A},
+{A,A,A,A,A},
+{A,A,A,A,A},
+{P,P,P,P,P},
+{P,P,P,P,P}},
 
-          
-        
-5
-        
-          
-6
- A A A A A
- A S S S A
- A S E S A
- A S S S A
- A A A A A
- 
- A A A A A
- A A A A A
- A A V A A
- A A A A A
- A A A A A
+{{T,T,T,T,T},
+{T,S,S,S,T},
+{A,A,A,A,A},
+{A,A,A,A,A},
+{A,A,A,A,A},
+{P,S,S,S,P},
+{P,P,P,P,P}},
+
+{{T,T,V,T,T},
+{T,S,E,S,T},
+{A,A,A,A,A},
+{A,A,A,A,A},
+{A,A,A,A,A},
+{P,S,C,S,P},
+{P,P,R,P,P}},
+
+{{T,T,T,T,T},
+{T,S,S,S,T},
+{A,A,A,A,A},
+{A,A,A,A,A},
+{A,A,A,A,A},
+{P,S,S,S,P},
+{P,P,P,P,P}},
+
+{{T,T,T,T,T},
+{T,T,T,T,T},
+{A,A,A,A,A},
+{A,A,A,A,A},
+{A,A,A,A,A},
+{P,P,P,P,P},
+{P,P,P,P,P}}
+}
+
+
  
 Multi-block Power Storage Unit 3x3x5
  - SU plateform

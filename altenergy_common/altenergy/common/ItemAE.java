@@ -7,7 +7,7 @@ import altenergy.lib.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemAE extends Item {
+public abstract class ItemAE extends Item {
 
 	public ItemAE(int id) {
 		super(id - Reference.SHIFTED_ID_RANGE_CORRECTION);

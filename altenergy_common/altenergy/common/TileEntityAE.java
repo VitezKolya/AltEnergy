@@ -1,5 +1,5 @@
 package altenergy.common;
 
-public class TileEntityAE {
+public abstract class TileEntityAE {
 
 }

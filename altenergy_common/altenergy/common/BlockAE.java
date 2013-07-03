@@ -8,7 +8,7 @@ import altenergy.lib.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockAE extends Block {
+public abstract class BlockAE extends Block {
 
 	public BlockAE(int id, Material material) {
 		super(id, material);

@@ -53,6 +53,15 @@ public class AltEnergy {
 
 		ModBlocks.init();
 		ModItems.init();
+		
+		int[][][] test = {{{1,2,3,4},
+					 {5,6,7,8},
+					 {9,10,11,12}},
+					{{101,102,103,104},
+					 {105,106,107,108},
+					 {109,110,111,112}}};
+		
+		System.out.println("X, Y, Z: " + test[1][0][0]);
 
 		GameRegistry.registerWorldGenerator(genManager);
 	}
