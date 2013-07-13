@@ -1,3 +1,4 @@
+
 package altenergy.blocks;
 
 import java.util.Random;
@@ -16,11 +17,12 @@ import altenergy.lib.Strings;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockStrangeCrystal extends Block {
+public class BlockStrangeCrystalOre extends Block {
 
 	public Icon icon;
 
-	public BlockStrangeCrystal(int par1) {
+	public BlockStrangeCrystalOre(int par1) {
+
 		super(par1, Material.rock);
 
 		this.setCreativeTab(AltEnergy.tabsAE);
@@ -63,6 +65,7 @@ public class BlockStrangeCrystal extends Block {
 	// @Override
 	@Override
 	public void dropBlockAsItemWithChance(World par1World, int par2, int par3, int par4, int par5, float par6, int par7) {
+
 		super.dropBlockAsItemWithChance(par1World, par2, par3, par4, par5, par6, par7);
 
 		if (this.idDropped(par5, par1World.rand, par7) != blockID

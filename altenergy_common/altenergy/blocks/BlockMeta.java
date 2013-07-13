@@ -1,3 +1,4 @@
+
 package altenergy.blocks;
 
 import java.util.List;
@@ -40,6 +41,7 @@ public class BlockMeta extends BlockAE {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public Icon getIcon(int id, int meta) {
+
 		return icons[meta];
 	}
 
@@ -49,6 +51,7 @@ public class BlockMeta extends BlockAE {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(int id, CreativeTabs creativeTab, List list) {
+
 		for (int meta = 0; meta < icons.length; meta++) {
 			list.add(new ItemStack(id, 1, meta));
 		}

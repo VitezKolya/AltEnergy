@@ -1,3 +1,4 @@
+
 package altenergy.worldGen;
 
 import java.util.Random;
@@ -14,6 +15,7 @@ public class WorldGenManager implements IWorldGenerator {
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator,
 			IChunkProvider chunkProvider) {
+
 		switch (world.provider.dimensionId) {
 			case -1:
 				generateNether(world, random, chunkX * 16, chunkZ * 16);
@@ -89,6 +91,7 @@ public class WorldGenManager implements IWorldGenerator {
 	 **/
 	public void addOreSpawn(Block block, Block replacedBlock, World world, Random random, int blockXPos, int blockZPos,
 			int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY) {
+
 		assert maxY > minY : "The maximum Y must be greater than the Minimum Y";
 		assert maxX > 0 && maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
 		assert minY > 0 : "addOreSpawn: The Minimum Y must be greater than 0";

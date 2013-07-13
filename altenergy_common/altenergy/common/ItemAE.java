@@ -1,3 +1,4 @@
+
 package altenergy.common;
 
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -10,6 +11,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public abstract class ItemAE extends Item {
 
 	public ItemAE(int id) {
+
 		super(id - Reference.SHIFTED_ID_RANGE_CORRECTION);
 		maxStackSize = 1;
 		this.setCreativeTab(AltEnergy.tabsAE);
@@ -19,6 +21,7 @@ public abstract class ItemAE extends Item {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
+
 		itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":"
 				+ this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
 	}

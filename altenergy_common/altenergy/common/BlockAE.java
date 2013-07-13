@@ -1,3 +1,4 @@
+
 package altenergy.common;
 
 import net.minecraft.block.Block;
@@ -11,6 +12,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public abstract class BlockAE extends Block {
 
 	public BlockAE(int id, Material material) {
+
 		super(id, material);
 		this.setCreativeTab(AltEnergy.tabsAE);
 	}

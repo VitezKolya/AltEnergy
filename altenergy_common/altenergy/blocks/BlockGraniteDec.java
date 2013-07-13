@@ -1,3 +1,4 @@
+
 package altenergy.blocks;
 
 import net.minecraft.block.material.Material;
@@ -15,6 +16,7 @@ public class BlockGraniteDec extends BlockAE {
 	public Icon icon;
 
 	public BlockGraniteDec(int id) {
+
 		super(id, Material.rock);
 
 		this.setCreativeTab(AltEnergy.tabsAE);

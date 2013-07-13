@@ -1,6 +1,19 @@
+
 package altenergy.configuration;
 
 public class ConfigurationSettings {
+
+	/*
+	 * General
+	 */
+	public static boolean ENABLE_PARTICLE_FX;
+	public static final String ENABLE_PARTICLE_FX_CONFIGNAME = "particle_fx.enabled";
+	public static final boolean ENABLE_PARTICLE_FX_DEFAULT = true;
+
+	public static String ENABLE_SOUNDS;
+	public static final String ENABLE_SOUNDS_CONFIGNAME = "sounds.enabled";
+	public static final String ENABLE_SOUNDS_DEFAULT = "all";
+
 	/*
 	 * Enable ores
 	 */

@@ -1,5 +1,8 @@
+
 package altenergy.common;
 
-public abstract class TileEntityAE {
+import net.minecraft.tileentity.TileEntity;
+
+public abstract class TileEntityAE extends TileEntity {
 
 }

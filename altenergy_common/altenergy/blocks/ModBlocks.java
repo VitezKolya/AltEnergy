@@ -1,3 +1,4 @@
+
 package altenergy.blocks;
 
 import net.minecraft.block.Block;
@@ -16,12 +17,15 @@ public class ModBlocks {
 	// public static Block metaBlock;
 	public static Block graniteDec;
 	public static Block multiPowerCoreDummy;
+	public static Block baseTE;
 
 	public static void init() {
+
 		granite = new BlockGranite(BlockIds.GRANITE);
 		graniteDec = new BlockGranite(BlockIds.GRANITEDEC);
 		graniteBrick = new BlockGraniteBrick(BlockIds.GRANITE_BRICK);
-		strangeCrystalOre = new BlockStrangeCrystal(BlockIds.STRANGE_CRYSTAL_ORE);
+		strangeCrystalOre = new BlockStrangeCrystalOre(BlockIds.STRANGE_CRYSTAL_ORE);
+		// baseTE = new BlockBaseTileEntity(BlockIds.BASE_TE);
 		// metaBlock = new BlockMeta(BlockIds.META_BLOCK);
 
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.granite, "pickaxe", 2);
@@ -33,8 +37,13 @@ public class ModBlocks {
 		GameRegistry.registerBlock(graniteDec, Strings.BLOCK_GRANITEDEC_NAME);
 		GameRegistry.registerBlock(graniteBrick, ItemGraniteBrickBlock.class, Strings.BLOCK_GRANITE_BRICKS_NAME);
 		GameRegistry.registerBlock(strangeCrystalOre, Strings.BLOCK_STRANGE_CRYSTAL_ORE_NAME);
+		GameRegistry.registerBlock(baseTE, Strings.BLOCK_BASETE_NAME);
 		// GameRegistry.registerBlock(metaBlock, ItemMetaBlock.class,
 		// Strings.BLOCK_META_NAME);
+
+		/* Reg TE */
+		// GameRegistry.registerTileEntity(TETestEntity.class,
+		// Strings.TE_TESTTE);
 
 		OreDictionary.registerOre(Strings.BLOCK_GRANITE_NAME, new ItemStack(granite, 1, 0));
 		OreDictionary.registerOre(Strings.BLOCK_STRANGE_CRYSTAL_ORE_NAME, new ItemStack(strangeCrystalOre, 1, 0));

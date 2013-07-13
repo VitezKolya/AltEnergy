@@ -1,3 +1,4 @@
+
 package altenergy.worldGen;
 
 import java.util.Random;
@@ -16,6 +17,7 @@ public class WorldGenAnyMinable extends WorldGenerator {
 	private int baseBlockId;
 
 	public WorldGenAnyMinable(int minableId, int numBlocks, int baseId) {
+
 		minableBlockId = minableId;
 		numberOfBlocks = numBlocks;
 		baseBlockId = baseId;
@@ -23,6 +25,7 @@ public class WorldGenAnyMinable extends WorldGenerator {
 
 	@Override
 	public boolean generate(World par1World, Random par2Random, int par3, int par4, int par5) {
+
 		float f = par2Random.nextFloat() * (float) Math.PI;
 		double d = par3 + 8 + MathHelper.sin(f) * numberOfBlocks / 8F;
 		double d1 = par3 + 8 - MathHelper.sin(f) * numberOfBlocks / 8F;

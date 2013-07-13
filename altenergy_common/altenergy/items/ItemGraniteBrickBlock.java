@@ -1,3 +1,4 @@
+
 package altenergy.items;
 
 import net.minecraft.item.ItemBlock;
@@ -7,6 +8,7 @@ import altenergy.lib.Strings;
 public class ItemGraniteBrickBlock extends ItemBlock {
 
 	public ItemGraniteBrickBlock(int id) {
+
 		super(id);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -26,6 +28,7 @@ public class ItemGraniteBrickBlock extends ItemBlock {
 
 	@Override
 	public int getMetadata(int meta) {
+
 		return meta;
 	}
 }

@@ -1,3 +1,4 @@
+
 package altenergy.creativetab;
 
 import net.minecraft.block.Block;
@@ -8,6 +9,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class CreativeTabAE extends CreativeTabs {
 
 	public CreativeTabAE(int par1, String par2Str) {
+
 		super(par1, par2Str);
 	}
 
