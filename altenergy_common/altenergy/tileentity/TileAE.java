@@ -3,20 +3,17 @@ package altenergy.tileentity;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.packet.Packet;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
 import altenergy.lib.Strings;
-import altenergy.network.PacketTypeHandler;
-import altenergy.network.packet.PacketTileUpdate;
 
-public class TETestEntity extends TileEntity {
+public class TileAE extends TileEntity {
 
 	protected ForgeDirection orientation;
 	protected byte state;
 	protected String customName;
 
-	public TETestEntity() {
+	public TileAE() {
 
 		orientation = ForgeDirection.SOUTH;
 		state = 0;
@@ -31,6 +28,11 @@ public class TETestEntity extends TileEntity {
 	public void setOrientation(ForgeDirection orientation) {
 
 		this.orientation = orientation;
+	}
+
+	public void setOrientation(int orientation) {
+
+		this.orientation = ForgeDirection.getOrientation(orientation);
 	}
 
 	public short getState() {
@@ -87,13 +89,6 @@ public class TETestEntity extends TileEntity {
 		if (this.hasCustomName()) {
 			nbt.setString(Strings.NBT_TE_CUSTOM_NAME, customName);
 		}
-	}
-
-	@Override
-	public Packet getDescriptionPacket() {
-
-		return PacketTypeHandler.populatePacket(new PacketTileUpdate(xCoord, yCoord, zCoord, orientation, state,
-				customName));
 	}
 
 	@Override

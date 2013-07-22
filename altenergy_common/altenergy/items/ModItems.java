@@ -17,7 +17,6 @@ public class ModItems {
 	public static Item dustTinyQuartz;
 	public static Item dustDiamond;
 	public static Item dustTinyDiamond;
-	public static Item teTest;
 
 	public static void init() {
 
@@ -30,8 +29,6 @@ public class ModItems {
 		dustDiamond = new ItemDusts(ItemIds.DIAMOND_DUST).setUnlocalizedName(Strings.ITEM_DIAMOND_DUST_NAME);
 		dustTinyDiamond = new ItemDusts(ItemIds.TINY_DIAMOND_DUST)
 				.setUnlocalizedName(Strings.ITEM_TINY_DIAMOND_DUST_NAME);
-		// teTest = new
-		// ItemTETest(ItemIds.TE_TEST).setUnlocalizedName(Strings.ITEM_BASETE_NAME);
 
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustTinyDiamond, 9), new Object[] {
 			new ItemStack(ModItems.dustDiamond, 1)

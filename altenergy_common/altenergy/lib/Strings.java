@@ -14,13 +14,12 @@ public class Strings {
 	public static final String ITEM_TINY_QUARTZ_DUST_NAME = "dustTinyQuartz";
 	public static final String ITEM_DIAMOND_DUST_NAME = "dustDiamond";
 	public static final String ITEM_TINY_DIAMOND_DUST_NAME = "dustTinyDiamond";
-	public static final String ITEM_BASETE_NAME = "itemBaseTE";
 
 	/* Block */
 	public static final String BLOCK_GRANITE_NAME = "blockGranite";
 	public static final String BLOCK_GRANITEDEC_NAME = "blockGraniteDec";
 	public static final String BLOCK_GRANITE_BRICKS_NAME = "graniteBricks";
-	public static final String BLOCK_BASETE_NAME = "blockBaseTE";
+	public static final String BLOCK_TILETEST_NAME = "blockTileTest";
 	public static final String[] BLOCK_GRANITE_BRICKS_SUBNAMES = new String[] {
 			"Default", "Panel", "Inset", "Tile", "Collumm", "Collumm_base", "Collumm_cap", "Inscriped"
 	};
@@ -34,6 +33,6 @@ public class Strings {
 	public static final String GEM_STRANGE_CRYSTAL_NAME = "gemStrangeCrystal";
 
 	/* Tile Entities */
-	public static final String TE_TESTTE = "teTestTE";
+	public static final String TILE_TEST = "tileTest";
 
 }

@@ -18,7 +18,7 @@
 <entry key="tile.graniteBricksCollumm_base.name">Granite Collumm Base</entry>
 <entry key="tile.graniteBricksCollumm_cap.name">Granite Collumm Cap</entry>
 <entry key="tile.graniteBricksInscriped.name">Inscriped Granite</entry>
-<entry key="tile.blockBaseTE.name">TE Test Block</entry>
+<entry key="tile.blockTileTest.name">Tile Test Block</entry>
 <entry key="tile.blockMeta1.name">Meta 1</entry>
 <entry key="tile.blockMeta2.name">Meta 2</entry>
 <entry key="tile.blockMeta3.name">Meta 3</entry>
@@ -27,7 +27,7 @@
 <entry key="tile.blockMeta6.name">Meta 6</entry>
 <entry key="tile.blockMeta7.name">Meta 7</entry>
 <entry key="tile.blockMeta8.name">Meta 8</entry>
-<entry key="tile.teTestTE.name">TE Test</entry>
+<entry key="tile.tileTest.name">Tile Test</entry>
 <entry key="tile.oreStrangeCrystal.name">Strange Crystal Ore</entry>
 <entry key="itemGroup.AE">AltEnergy</entry>
 </properties>

@@ -9,7 +9,7 @@ public class BlockIds {
 	public static final int GRANITE_BRICK_DEFAULT = 1442;
 	public static final int STRANGE_CRYSTAL_ORE_DEFAULT = 1443;
 	public static final int META_BLOCK_DEFAULT = 1444;
-	public static final int BASE_TE_DEFAULT = 1445;
+	public static final int BASE_TILETEST_DEFAULT = 1445;
 
 	/* Current item ids */
 	public static int GRANITE;
@@ -17,5 +17,5 @@ public class BlockIds {
 	public static int GRANITE_BRICK;
 	public static int STRANGE_CRYSTAL_ORE;
 	public static int META_BLOCK;
-	public static int BASE_TE;
+	public static int BASE_TILETEST;
 }

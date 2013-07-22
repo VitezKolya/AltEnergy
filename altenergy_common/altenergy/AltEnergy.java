@@ -22,10 +22,13 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
-@NetworkMod(channels = Reference.CHANNEL_NAME, serverSideRequired = false, clientSideRequired = true)
+
+// Don't understand packets at this time so commenting out for now.
+//@NetworkMod(channels = Reference.CHANNEL_NAME, serverSideRequired = false, clientSideRequired = true)
 public class AltEnergy {
 
 	@Instance(Reference.MOD_ID)
@@ -54,31 +57,12 @@ public class AltEnergy {
 
 		ModBlocks.init();
 		ModItems.init();
-		// ModTileEntities.init();
-
-		int[][][] test = {
-				{
-						{
-								1, 2, 3, 4
-						}, {
-								5, 6, 7, 8
-						}, {
-								9, 10, 11, 12
-						}
-				}, {
-						{
-								101, 102, 103, 104
-						}, {
-								105, 106, 107, 108
-						}, {
-								109, 110, 111, 112
-						}
-				}
-		};
-
-		System.out.println("X, Y, Z: " + test[1][0][0]);
+		
+		proxy.registerTileEntities();
 
 		GameRegistry.registerWorldGenerator(genManager);
+		
+		NetworkRegistry.instance().registerGuiHandler(this, proxy);
 	}
 
 	@Init
