@@ -21,11 +21,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkMod;
-import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, certificateFingerprint = Reference.FINGERPRINT)
 
 // Don't understand packets at this time so commenting out for now.
 //@NetworkMod(channels = Reference.CHANNEL_NAME, serverSideRequired = false, clientSideRequired = true)
@@ -57,12 +55,10 @@ public class AltEnergy {
 
 		ModBlocks.init();
 		ModItems.init();
-		
-		proxy.registerTileEntities();
 
 		GameRegistry.registerWorldGenerator(genManager);
 		
-		NetworkRegistry.instance().registerGuiHandler(this, proxy);
+		//NetworkRegistry.instance().registerGuiHandler(this, proxy);
 	}
 
 	@Init

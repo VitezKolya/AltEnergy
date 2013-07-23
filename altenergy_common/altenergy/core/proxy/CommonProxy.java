@@ -10,10 +10,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class CommonProxy implements IGuiHandler {
 
-	public void registerTileEntities() {
-		//GameRegistry.registerTileEntity(TileTest.class, Strings.TILE_TEST);
-	}
-	
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 

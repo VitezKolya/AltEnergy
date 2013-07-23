@@ -1,8 +1,8 @@
 [
 {
-  "modid" : "AE",
+  "modid" : "AltEnergy",
   "name" : "AltEnergy",
-  "version" : "0.0.1",
+  "version" : "@VERSION@",
   "url" : "",
   "credits" : "",
   "authors": [
