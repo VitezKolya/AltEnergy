@@ -9,7 +9,6 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import altenergy.AltEnergy;
-import altenergy.common.BlockAE;
 import altenergy.lib.Reference;
 import altenergy.lib.Strings;
 import cpw.mods.fml.relauncher.Side;

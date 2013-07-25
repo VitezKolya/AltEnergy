@@ -114,6 +114,10 @@ public class ConfigurationHandler {
 					BlockIds.STRANGE_CRYSTAL_ORE_DEFAULT).getInt(BlockIds.STRANGE_CRYSTAL_ORE_DEFAULT);
 			BlockIds.META_BLOCK = configuration.getBlock(Strings.BLOCK_META_NAME, BlockIds.META_BLOCK_DEFAULT).getInt(
 					BlockIds.META_BLOCK_DEFAULT);
+			
+			/* Tile config*/
+			BlockIds.BASE_TILETEST = configuration.getBlock(Strings.BLOCK_TILETEST_NAME, BlockIds.BASE_TILETEST_DEFAULT).getInt(
+					BlockIds.BASE_TILETEST_DEFAULT);
 
 		} catch (Exception e) {
 			FMLLog.log(Level.SEVERE, e, Reference.MOD_NAME + " has had a problem loading its configuration");

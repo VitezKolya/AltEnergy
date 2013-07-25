@@ -16,7 +16,6 @@ public class ModBlocks {
 	public static Block graniteBrick;
 	public static Block strangeCrystalOre;
 	public static Block graniteDec;
-	public static Block multiPowerCoreDummy;
 	public static Block tileBlock;
 
 	public static void init() {
@@ -26,7 +25,7 @@ public class ModBlocks {
 		graniteBrick = new BlockGraniteBrick(BlockIds.GRANITE_BRICK);
 		strangeCrystalOre = new BlockStrangeCrystalOre(BlockIds.STRANGE_CRYSTAL_ORE);
 		tileBlock = new BlockTileTest(BlockIds.BASE_TILETEST);
-
+		
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.granite, "pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.graniteDec, "pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.graniteBrick, "pickaxe", 2);
@@ -36,8 +35,8 @@ public class ModBlocks {
 		GameRegistry.registerBlock(graniteDec, Strings.BLOCK_GRANITEDEC_NAME);
 		GameRegistry.registerBlock(graniteBrick, ItemGraniteBrickBlock.class, Strings.BLOCK_GRANITE_BRICKS_NAME);
 		GameRegistry.registerBlock(strangeCrystalOre, Strings.BLOCK_STRANGE_CRYSTAL_ORE_NAME);
+		
 		GameRegistry.registerBlock(tileBlock, Strings.BLOCK_TILETEST_NAME);
-
 		GameRegistry.registerTileEntity(TileTest.class, Strings.TILE_TEST);
 		
 		OreDictionary.registerOre(Strings.BLOCK_GRANITE_NAME, new ItemStack(granite, 1, 0));

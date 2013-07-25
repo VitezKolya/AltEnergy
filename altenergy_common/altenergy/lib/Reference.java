@@ -2,7 +2,7 @@
 package altenergy.lib;
 
 public class Reference {
-	public static final String MOD_ID = "AltEnergy";
+	public static final String MOD_ID = "alte";
 	public static final String MOD_NAME = "AltEnergy";
 	public static final String VERSION = "@VERSION@ (build @BUILD_NUMBER@)";
 	public static final String CHANNEL_NAME = MOD_ID;

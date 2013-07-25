@@ -7,6 +7,7 @@ public class TileTest extends TileEntity {
 
 	public TileTest() {
 
+		System.out.println("TileTest Created - ");
 	}
 
 }

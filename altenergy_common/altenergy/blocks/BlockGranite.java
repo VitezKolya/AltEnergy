@@ -9,7 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 import altenergy.AltEnergy;
-import altenergy.common.BlockAE;
 import altenergy.configuration.ConfigurationSettings;
 import altenergy.items.ModItems;
 import altenergy.lib.ItemIds;
@@ -63,9 +62,9 @@ public class BlockGranite extends BlockAE {
 				|| this.idDropped(par5, par1World.rand, par7) != ItemIds.STRANGE_CRYSTAL_DUST) {
 
 			if (ConfigurationSettings.GRANITE_CHEAT_ENABLE) {
-				this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModBlocks.granite, 1));
+				//this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModBlocks.granite, 1));
 			} else {
-				this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModBlocks.graniteDec, 1));
+				//this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModBlocks.graniteDec, 1));
 			}
 
 			if (par1World.rand.nextInt(5) == 4) {

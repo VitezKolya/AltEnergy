@@ -1,5 +1,5 @@
 
-package altenergy.common;
+package altenergy.items;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;

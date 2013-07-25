@@ -23,10 +23,17 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, certificateFingerprint = Reference.FINGERPRINT)
+/**
+ * AltEnergy
+ * 
+ * AltEnergy
+ * 
+ * @author VitezKolya
+ * @license GNU Public License v3 (http://www.gnu.org/licenses/gpl.html)
+ * 
+ */
 
-// Don't understand packets at this time so commenting out for now.
-//@NetworkMod(channels = Reference.CHANNEL_NAME, serverSideRequired = false, clientSideRequired = true)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, certificateFingerprint = Reference.FINGERPRINT)
 public class AltEnergy {
 
 	@Instance(Reference.MOD_ID)
@@ -57,8 +64,6 @@ public class AltEnergy {
 		ModItems.init();
 
 		GameRegistry.registerWorldGenerator(genManager);
-		
-		//NetworkRegistry.instance().registerGuiHandler(this, proxy);
 	}
 
 	@Init
