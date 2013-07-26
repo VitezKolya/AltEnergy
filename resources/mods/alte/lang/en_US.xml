@@ -20,6 +20,8 @@
 <entry key="tile.graniteBricksInscriped.name">Inscriped Granite</entry>
 <entry key="tile.blockController.name">Controller</entry>
 <entry key="tile.blockControllerFF.name">Force Field Controller</entry>
+<entry key="tile.blockEmiterFF.name">Force Field Emitter</entry>
+<entry key="tile.blockPowerRegulator.name">Power Regulator</entry>
 <entry key="tile.blockMeta1.name">Meta 1</entry>
 <entry key="tile.blockMeta2.name">Meta 2</entry>
 <entry key="tile.blockMeta3.name">Meta 3</entry>

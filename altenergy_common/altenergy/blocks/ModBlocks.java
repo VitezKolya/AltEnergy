@@ -31,7 +31,7 @@ public class ModBlocks {
 		controllerFF = new BlockControllerFF(BlockIds.CONTROLLER_FF);
 		emiterFF = new BlockEmiterFF(BlockIds.EMITER_FF);
 		powerRegulator = new BlockPowerRegulator(BlockIds.POWER_REGULATOR);
-		
+
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.granite, "pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.graniteDec, "pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(ModBlocks.graniteBrick, "pickaxe", 2);
@@ -41,13 +41,13 @@ public class ModBlocks {
 		GameRegistry.registerBlock(graniteDec, Strings.BLOCK_GRANITEDEC_NAME);
 		GameRegistry.registerBlock(graniteBrick, ItemGraniteBrickBlock.class, Strings.BLOCK_GRANITE_BRICKS_NAME);
 		GameRegistry.registerBlock(strangeCrystalOre, Strings.BLOCK_STRANGE_CRYSTAL_ORE_NAME);
-		
+
 		GameRegistry.registerBlock(emiterFF, Strings.BLOCK_EMITER_FF);
 		GameRegistry.registerBlock(controller, Strings.BLOCK_CONTROLLER);
 		GameRegistry.registerBlock(controllerFF, Strings.BLOCK_CONTROLLER_FF);
 		GameRegistry.registerBlock(powerRegulator, Strings.BLOCK_POWER_REGULATOR);
 		GameRegistry.registerTileEntity(TileControllerFF.class, Strings.TILE_CONTROLLER_FF);
-		
+
 		OreDictionary.registerOre(Strings.BLOCK_GRANITE_NAME, new ItemStack(granite, 1, 0));
 		OreDictionary.registerOre(Strings.BLOCK_STRANGE_CRYSTAL_ORE_NAME, new ItemStack(strangeCrystalOre, 1, 0));
 

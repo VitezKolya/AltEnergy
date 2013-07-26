@@ -112,23 +112,26 @@ public class ConfigurationHandler {
 					BlockIds.GRANITE_BRICK_DEFAULT).getInt(BlockIds.GRANITE_BRICK_DEFAULT);
 			BlockIds.STRANGE_CRYSTAL_ORE = configuration.getBlock(Strings.BLOCK_STRANGE_CRYSTAL_ORE_NAME,
 					BlockIds.STRANGE_CRYSTAL_ORE_DEFAULT).getInt(BlockIds.STRANGE_CRYSTAL_ORE_DEFAULT);
-			
-			/* Tile config*/
+
+			/* Tile config */
 			BlockIds.CONTROLLER = configuration.getBlock(Strings.BLOCK_CONTROLLER, BlockIds.CONTROLLER_DEFAULT).getInt(
 					BlockIds.CONTROLLER_DEFAULT);
-			BlockIds.CONTROLLER_FF = configuration.getBlock(Strings.BLOCK_CONTROLLER_FF, BlockIds.CONTROLLER_FF_DEFAULT).getInt(
-					BlockIds.CONTROLLER_FF_DEFAULT);
+			BlockIds.CONTROLLER_FF = configuration
+					.getBlock(Strings.BLOCK_CONTROLLER_FF, BlockIds.CONTROLLER_FF_DEFAULT).getInt(
+							BlockIds.CONTROLLER_FF_DEFAULT);
 			BlockIds.EMITER_FF = configuration.getBlock(Strings.BLOCK_EMITER_FF, BlockIds.EMITER_FF_DEFAULT).getInt(
 					BlockIds.EMITER_FF_DEFAULT);
-			BlockIds.POWER_REGULATOR = configuration.getBlock(Strings.BLOCK_POWER_REGULATOR, BlockIds.POWER_REGULATOR_DEFAULT).getInt(
-					BlockIds.POWER_REGULATOR_DEFAULT);
-			
+			BlockIds.POWER_REGULATOR = configuration.getBlock(Strings.BLOCK_POWER_REGULATOR,
+					BlockIds.POWER_REGULATOR_DEFAULT).getInt(BlockIds.POWER_REGULATOR_DEFAULT);
+
 			ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH = configuration.get(CATEGORY_BLOCK,
 					ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH_CONFIGNAME,
-					ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH_DEFAULT).getInt(ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH_DEFAULT);
+					ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH_DEFAULT).getInt(
+					ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH_DEFAULT);
 			ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT = configuration.get(CATEGORY_BLOCK,
 					ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT_CONFIGNAME,
-					ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT_DEFAULT).getInt(ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT_DEFAULT);
+					ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT_DEFAULT).getInt(
+					ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT_DEFAULT);
 
 		} catch (Exception e) {
 			FMLLog.log(Level.SEVERE, e, Reference.MOD_NAME + " has had a problem loading its configuration");
