@@ -21,7 +21,7 @@ public class ConfigurationSettings {
 	public static final String ORE_GENERATION_ENABLE_CONFIGNAME = "ore_generation.enable";
 	public static final boolean ORE_GENERATION_ENABLE_DEFAULT = true;
 
-	/* Granite */
+	/* Granite Gen*/
 	public static boolean GRANITE_GENERATION_ENABLE;
 	public static final String GRANITE_GENERATION_ENABLE_CONFIGNAME = "granite_generation.enable";
 	public static final boolean GRANITE_GENERATION_ENABLE_DEFAULT = true;
@@ -45,6 +45,14 @@ public class ConfigurationSettings {
 	public static boolean GRANITE_CHEAT_ENABLE;
 	public static final String GRANITE_CHEAT_ENABLE_CONFIGNAME = "granite_cheat.enable";
 	public static final boolean GRANITE_CHEAT_ENABLE_DEFAULT = false;
+	
+	/* ForceField Config */
+	public static int FORCEFIELD_DOOR_MAXWIDTH;
+	public static String FORCEFIELD_DOOR_MAXWIDTH_CONFIGNAME = "forcefield_door.max_width";
+	public static final int FORCEFIELD_DOOR_MAXWIDTH_DEFAULT = 8;
+	public static int FORCEFIELD_DOOR_MAXHEIGHT;
+	public static String FORCEFIELD_DOOR_MAXHEIGHT_CONFIGNAME = "forcefield_door.max_height";
+	public static final int FORCEFIELD_DOOR_MAXHEIGHT_DEFAULT = 8;
 
 	/* Strange Crystal */
 	public static boolean STRANGE_CRYSTAL_GENERATION_ENABLE;
@@ -71,7 +79,7 @@ public class ConfigurationSettings {
 	public static final String STRANGE_CRYSTAL_GENERATE_GRANITE_ONLY_ENABLE_CONFIGNAME = "strange_crystal_generate.only_granite";
 	public static final boolean STRANGE_CRYSTAL_GENERATE_GRANITE_ONLY_ENABLE_DEFAULT = true;
 
-	/* Mod API */
+	/* Mod Plugins */
 	public static boolean IC2_INTEGRATION_ENABLE;
 	public static final String IC2_CONFIGNAME = "IC2";
 	public static final boolean IC2_ENABLE_DEFAULT = false;

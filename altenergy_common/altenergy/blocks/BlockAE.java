@@ -30,7 +30,7 @@ public abstract class BlockAE extends Block {
 		register.registerIcon(Reference.MOD_ID + ":"
 				+ this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
 	}
-
+/*
 	@Override
 	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLiving entityLiving, ItemStack itemStack) {
 
@@ -59,5 +59,5 @@ public abstract class BlockAE extends Block {
 		}
 
 		((TileAE) world.getBlockTileEntity(x, y, z)).setOrientation(direction);
-	}
+	}*/
 }

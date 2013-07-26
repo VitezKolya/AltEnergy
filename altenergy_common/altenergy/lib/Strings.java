@@ -19,7 +19,6 @@ public class Strings {
 	public static final String BLOCK_GRANITE_NAME = "blockGranite";
 	public static final String BLOCK_GRANITEDEC_NAME = "blockGraniteDec";
 	public static final String BLOCK_GRANITE_BRICKS_NAME = "graniteBricks";
-	public static final String BLOCK_TILETEST_NAME = "blockTileTest";
 	public static final String[] BLOCK_GRANITE_BRICKS_SUBNAMES = new String[] {
 			"Default", "Panel", "Inset", "Tile", "Collumm", "Collumm_base", "Collumm_cap", "Inscriped"
 	};
@@ -27,12 +26,16 @@ public class Strings {
 	public static final String[] BLOCK_META_NAMES = new String[] {
 			"1", "2", "3", "4", "5", "6", "7", "8"
 	};
-	public static final String BLOCK_MULTIBLOCK_POWERCORE = "blockCrystalPowerCore";
+	public static final String BLOCK_CONTROLLER = "blockController";
+	public static final String BLOCK_CONTROLLER_FF = "blockControllerFF";
+	public static final String BLOCK_EMITER_FF = "blockEmiterFF";
+	public static final String BLOCK_POWER_REGULATOR = "blockPowerRegulator";
 	public static final String BLOCK_STRANGE_CRYSTAL_ORE_NAME = "oreStrangeCrystal";
 
 	public static final String GEM_STRANGE_CRYSTAL_NAME = "gemStrangeCrystal";
 
 	/* Tile Entities */
-	public static final String TILE_TEST = "tileTest";
+	public static final String TILE_CONTROLLER_FF = "tileControllerFF";
+	public static final String TILE_EMITER_FF = "tileEmiterFF";
 
 }
