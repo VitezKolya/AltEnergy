@@ -48,7 +48,7 @@
 	</target>
 	
 	<target name="sign_jar">
-		<signjar jar="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}\AltEnergy-universal-${build.release.mod.version}-${build_number.build_number}.jar" keystore="${build.keystore.location}" alias="${build.keystore.alias}" storepass="${build.keystore.password}" />
+		<signjar jar="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}\AltEnergy-universal-mc${build.release.minecraft.version}-vs${build.release.mod.version}-${build_number.build_number}.jar" keystore="${build.keystore.location}" alias="${build.keystore.alias}" storepass="${build.keystore.password}" />
 	</target>
 	
 	<target name="build">
@@ -61,7 +61,7 @@
 
 		<!-- Build the jar -->
 		<mkdir dir="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}" />
-		<jar destfile="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}\AltEnergy-universal-${build.release.mod.version}-${build_number.build_number}.jar">
+		<jar destfile="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}\AltEnergy-universal-mc${build.release.minecraft.version}-vs${build.release.mod.version}-${build_number.build_number}.jar">
 			<fileset dir="${build.dir.development}\mcp\src\minecraft\" includes="mcmod.info" />
 			<fileset dir="${build.dir.development}\mcp\reobf\minecraft" />
 			<fileset dir="${build.dir.development}\source\AltEnergy\resources" excludes="**/xcf/**" />
@@ -82,7 +82,7 @@
 
 		<!-- Build the jar -->
 		<mkdir dir="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}" />
-		<jar destfile="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}\AltEnergy-universal-${build.release.mod.version}-${build_number.build_number}.jar">
+		<jar destfile="${build.dir.release}\${build.release.minecraft.version}\${build.release.mod.version}\AltEnergy-universal-mc${build.release.minecraft.version}-vs${build.release.mod.version}.${build_number.build_number}.jar">
 			<fileset dir="${build.dir.development}\mcp\src\minecraft\" includes="mcmod.info" />
 			<fileset dir="${build.dir.development}\mcp\reobf\minecraft" />
 			<fileset dir="${build.dir.development}\source\AltEnergy\resources" excludes="**/xcf/**" />
