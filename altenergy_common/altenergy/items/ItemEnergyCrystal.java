@@ -1,14 +1,14 @@
-
 package altenergy.items;
 
 import altenergy.AltEnergy;
 
-public class ItemStrangeCrystal extends ItemAE {
+public class ItemEnergyCrystal extends ItemAE{
 
-	public ItemStrangeCrystal(int id) {
+	public ItemEnergyCrystal(int id) {
 
 		super(id);
 		this.setCreativeTab(AltEnergy.tabsAE);
-		this.setMaxStackSize(16);
+		this.maxStackSize = 1;
 	}
+	
 }

@@ -1,12 +1,12 @@
 
 package altenergy.tileentity;
 
-public enum PCState {
+public enum PowerCoreState {
 	Idle, Generate, Overload, Vent;
 
-	static PCState[] VALUES = values();
+	static PowerCoreState[] VALUES = values();
 
-	public static PCState valueOf(int i) {
+	public static PowerCoreState valueOf(int i) {
 
 		try {
 			return VALUES[i];

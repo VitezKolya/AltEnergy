@@ -6,8 +6,10 @@ import java.io.File;
 import net.minecraft.creativetab.CreativeTabs;
 import altenergy.blocks.ModBlocks;
 import altenergy.configuration.ConfigurationHandler;
+import altenergy.core.handlers.AltEnergyHooks;
 import altenergy.core.handlers.LocalizationHandler;
 import altenergy.core.proxy.CommonProxy;
+import altenergy.core.util.EnergyUtil;
 import altenergy.creativetab.CreativeTabAE;
 import altenergy.items.ModItems;
 import altenergy.lib.Reference;
@@ -45,6 +47,8 @@ public class AltEnergy {
 	public static CreativeTabs tabsAE = new CreativeTabAE(CreativeTabs.getNextID(), Reference.MOD_ID);
 
 	public static WorldGenManager genManager = new WorldGenManager();
+	
+	public static AltEnergyHooks hooks;
 
 	/**
 	 * This is were you load up blocks/items

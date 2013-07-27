@@ -29,7 +29,7 @@ public class TileControllerFF extends TileEntity {
 		worldObj.getBlockId(xCoord, yCoord + 1, zCoord + 1);
 		worldObj.getBlockId(xCoord, yCoord - 1, zCoord + 1);
 
-		// if(northID == BlockIds.)
+		// if(northID == BlockIds)
 		return false;
 	}
 
