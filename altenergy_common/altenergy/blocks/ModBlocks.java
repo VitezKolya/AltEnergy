@@ -46,7 +46,6 @@ public class ModBlocks {
 		GameRegistry.registerBlock(controller, Strings.BLOCK_CONTROLLER);
 		GameRegistry.registerBlock(controllerFF, Strings.BLOCK_CONTROLLER_FF);
 		GameRegistry.registerBlock(powerRegulator, Strings.BLOCK_POWER_REGULATOR);
-		GameRegistry.registerTileEntity(TileControllerFF.class, Strings.TILE_CONTROLLER_FF);
 
 		OreDictionary.registerOre(Strings.BLOCK_GRANITE_NAME, new ItemStack(granite, 1, 0));
 		OreDictionary.registerOre(Strings.BLOCK_STRANGE_CRYSTAL_ORE_NAME, new ItemStack(strangeCrystalOre, 1, 0));

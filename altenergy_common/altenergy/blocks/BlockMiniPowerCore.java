@@ -31,7 +31,7 @@ public class BlockMiniPowerCore extends BlockAdvanced {
 		
 		this.iconOutput = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + Strings.BLOCK_MINI_POWER_CORE + "_OutputSide");
 		this.iconTop = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + Strings.BLOCK_MINI_POWER_CORE + "TopSide");
-		this.iconBlock = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + Strings.BLOCK_MINI_POWER_CORE + "_BSide");
+		this.iconBlock = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + Strings.BLOCK_MINI_POWER_CORE + "_MachineSide");
 		this.iconFace = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + Strings.BLOCK_MINI_POWER_CORE + "_FaceSide");
 	}
 	

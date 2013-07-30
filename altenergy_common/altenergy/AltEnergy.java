@@ -13,6 +13,7 @@ import altenergy.core.util.EnergyUtil;
 import altenergy.creativetab.CreativeTabAE;
 import altenergy.items.ModItems;
 import altenergy.lib.Reference;
+import altenergy.tileentity.ModTiles;
 import altenergy.worldGen.WorldGenManager;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -66,6 +67,7 @@ public class AltEnergy {
 
 		ModBlocks.init();
 		ModItems.init();
+		ModTiles.init();
 
 		GameRegistry.registerWorldGenerator(genManager);
 	}

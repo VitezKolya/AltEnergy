@@ -44,5 +44,6 @@ public class Strings {
 	/* Tile Entities */
 	public static final String TILE_CONTROLLER_FF = "tileControllerFF";
 	public static final String TILE_EMITER_FF = "tileEmiterFF";
+	public static final String TILE_MINI_POWER_CORE = "tileMiniPowerCore";
 	
 }

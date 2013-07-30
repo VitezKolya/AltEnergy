@@ -1,4 +1,60 @@
 
+Energy Crystal Power Core
+An 5x5x2 multi-block structure. This structure can generate an enormous amount of 
+power(1TW of power at 1million Volts)
+ECP core has 4 states:
+Idle		- This is when the generator is doing nothing
+Generate	- This is what you expect when the generator is producting energy
+Overload	- This state is when the generator is over working. If it stays in this state 
+			  too long the generator will explode taking your base out with it. At lest 
+			  a large chunk of it.
+Vent		- Vent out and cool off the generator to prevent an explostion
+
+This structure requires a Power Core Controller to operate.
+
+Energy Crystal Power Core Controller
+This is a TileEntity that controls the ECP core. You can make the core overload idle and 
+vent. Also this can be locked out and only be controlled from the Computer Core or CC.
+
+Computer Core
+A multi-block structure that acts as a central control system for your base. It can store
+who you want to access your doors, forcefield doors, ECP core controller, and Matter Forge. 
+You can setup it so that one person can only access 4 doors and one force field but nothing 
+else. Another as an intruder so that any combat system will automaticly target them and 
+attempt to kill him/her. This stucture is also where your self-disctruct is setup at by 
+overloading your ECP core. Takes 10KW at 960v
+
+Automatic Door/BlastDoor - 4x3, 4x4, 5x4 sturctures.
+This is a multi-block structure door. It requires some power to operate. It's controlled 
+by a Door Controller and powered by a power regulator. 5KW at 480v
+
+Force Field Door - 1x8 with a 8m space between the two sturctures.
+A multi-block sturcture that can generate a force field between two emitter sturctures. One of
+the sturctures require a power regulator and a FF controller to operate. Needs a large amount 
+of power to operate. Takes 10KW at 960v
+
+Oil Drilling Rig
+A multi-block structure that drills down to bedrock to where the vast and inifinite resavores 
+of oil lies. Takes 25KW at 1040v
+
+Energy Busway
+Conductive pathway for 1TW at 1,000,000v.
+This conductor can only contect to a junction box or a power regulator. It can not connect 
+to it self or to any other cable.
+
+Energy Cable
+Cunductive pathway for 50KW at 2000v. This cable can connect to anything excepct Busway.
+
+Data Cable
+Connects controllers to the computer core and can connect to CC computers.
+
+Utility Busway Bundle(Busway + Data Cable)
+This cable is the same as the Energy busway but it also has a data cable bundled with it.
+
+Junction Box
+This box contect energy busways to cables. Also can connect to any other mod's 
+cables(IC2,buildcraft,UE api cables)
+
 Granite - The world gen version
 Granite - What drops from the mined WG version
 Granite Panel

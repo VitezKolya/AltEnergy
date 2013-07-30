@@ -8,6 +8,7 @@ import net.minecraft.world.World;
 import altenergy.AltEnergy;
 import altenergy.lib.Reference;
 import altenergy.lib.Strings;
+import altenergy.tileentity.TileControllerFF;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -24,7 +25,7 @@ public class BlockControllerFF extends BlockContainerAE {
 	public TileEntity createNewTileEntity(World world) {
 
 		// TODO Auto-generated method stub
-		return null;
+		return new TileControllerFF();
 	}
 
 	@Override

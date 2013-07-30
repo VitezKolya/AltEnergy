@@ -3,7 +3,9 @@ package altenergy.tileentity;
 import java.util.HashSet;
 import java.util.Set;
 
+import altenergy.items.ModItems;
 import altenergy.lib.Reference;
+import altenergy.lib.Strings;
 
 import com.google.common.io.ByteArrayDataInput;
 
@@ -203,22 +205,19 @@ public class TileMiniPowerCore extends TileEntityElectrical implements IInventor
 	@Override
 	public int[] getAccessibleSlotsFromSide(int var1) {
 
-		// TODO Auto-generated method stub
-		return null;
+		return new int[] {0};
 	}
 
 	@Override
-	public boolean canInsertItem(int i, ItemStack itemstack, int j) {
+	public boolean canInsertItem(int slotID, ItemStack itemstack, int j) {
 
-		// TODO Auto-generated method stub
-		return false;
+		return this.isStackValidForSlot(slotID, itemstack);
 	}
 
 	@Override
-	public boolean canExtractItem(int i, ItemStack itemstack, int j) {
+	public boolean canExtractItem(int slotID, ItemStack itemstack, int j) {
 
-		// TODO Auto-generated method stub
-		return false;
+		return slotID == 0;
 	}
 
 	@Override
@@ -236,49 +235,74 @@ public class TileMiniPowerCore extends TileEntityElectrical implements IInventor
 	@Override
 	public ItemStack decrStackSize(int i, int j) {
 
-		return null;
+		ItemStack var3;
+		
+		if(this.containingItems[i] != null) {
+			
+			if(this.containingItems[i].stackSize <= j) {
+				var3 = this.containingItems[i];
+				this.containingItems[i] = null;
+				return var3;
+			} else {
+				var3 = this.containingItems[i].splitStack(j);
+				
+				if(this.containingItems[i].stackSize == 0) {
+					this.containingItems[i] = null;
+				}
+				
+				return var3;
+			}
+		} else {
+			
+			return null;
+		}
 	}
 
 	@Override
 	public ItemStack getStackInSlotOnClosing(int i) {
 
-		// TODO Auto-generated method stub
-		return null;
+		if(this.containingItems[i] != null) {
+			ItemStack var2 = this.containingItems[i];
+			this.containingItems[i] = null;
+					return var2;
+		} else {
+			return null;
+		}
 	}
 
 	@Override
 	public void setInventorySlotContents(int i, ItemStack itemstack) {
 
-		// TODO Auto-generated method stub
+		this.containingItems[i] = itemstack;
+		
+		if(itemstack != null && itemstack.stackSize > this.getInventoryStackLimit()) {
+			itemstack.stackSize = this.getInventoryStackLimit();
+		}
 		
 	}
 
 	@Override
 	public String getInvName() {
 
-		// TODO Auto-generated method stub
-		return null;
+		return Strings.TILE_MINI_POWER_CORE;
 	}
 
 	@Override
 	public boolean isInvNameLocalized() {
 
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public int getInventoryStackLimit() {
 
-		// TODO Auto-generated method stub
-		return 0;
+		return 1;
 	}
 
 	@Override
-	public boolean isUseableByPlayer(EntityPlayer entityplayer) {
+	public boolean isUseableByPlayer(EntityPlayer entityPlayer) {
 
-		// TODO Auto-generated method stub
-		return false;
+		return this.worldObj.getBlockTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : entityPlayer.getDistanceSq(this.xCoord + 0.5D, this.yCoord + 0.5D, this.zCoord + 0.5D) <= 64.0D;
 	}
 
 	@Override
@@ -294,8 +318,7 @@ public class TileMiniPowerCore extends TileEntityElectrical implements IInventor
 	@Override
 	public boolean isStackValidForSlot(int i, ItemStack itemstack) {
 
-		// TODO Auto-generated method stub
-		return false;
+		return itemstack.itemID == ModItems.gemPowerCrystal.itemID;
 	}
 
 }
