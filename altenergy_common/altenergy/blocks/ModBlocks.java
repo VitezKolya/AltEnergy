@@ -8,7 +8,6 @@ import net.minecraftforge.oredict.OreDictionary;
 import altenergy.items.ItemGraniteBrickBlock;
 import altenergy.lib.BlockIds;
 import altenergy.lib.Strings;
-import altenergy.tileentity.TileControllerFF;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlocks {

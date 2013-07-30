@@ -33,17 +33,16 @@ public class Strings {
 	public static final String BLOCK_STRANGE_CRYSTAL_ORE_NAME = "oreStrangeCrystal";
 	public static final String BLOCK_JUNCTIONBOX = "blockJunctionBox";
 	public static final String BLOCK_MINI_POWER_CORE = "blockMiniPowerCore";
-	
+
 	public static final String BLOCK_ENERGY_BUSWAY = "blockEnergyBusway";
 	public static final String BLOCK_ENERGY_CABLE = "blockEnergyCable";
 	public static final String BLOCK_DATA_CABLE = "blockDataCable";
-	
-	
+
 	public static final String GEM_STRANGE_CRYSTAL_NAME = "gemStrangeCrystal";
 
 	/* Tile Entities */
 	public static final String TILE_CONTROLLER_FF = "tileControllerFF";
 	public static final String TILE_EMITER_FF = "tileEmiterFF";
 	public static final String TILE_MINI_POWER_CORE = "tileMiniPowerCore";
-	
+
 }
