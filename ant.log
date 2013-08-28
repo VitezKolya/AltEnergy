@@ -1,0 +1,562 @@
+
+build:
+
+clean:
+   [delete] Deleting: C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft\mcmod.info
+   [delete] Deleting directory C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft\ic2
+   [delete] Deleting directory C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft\thermalexpansion
+   [delete] Deleting directory C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft\universalelectricity
+   [delete] Deleting directory C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft\Mekanism
+   [delete] Deleting directory C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft\altenergy
+   [delete] Deleting directory C:\Users\David N\Desktop\MC moding\Mod dev\mcp\reobf\minecraft
+
+increment_build_number:
+[propertyfile] Updating property file: C:\Users\David N\Desktop\MC moding\Mod dev\Source\AltEnergy\build_number.properties
+
+prep:
+     [copy] Copying 245 files to C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft
+     [copy] Copied 68 empty directories to 2 empty directories under C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft
+
+recompile:
+     [exec] == MCP 7.51 (data: 7.51, client: 1.5.2, server: 1.5.2) ==
+     [exec] "scalac" is not found on the PATH.  Scala files will not be recompiled
+     [exec] # found ff, ff patches, srgs, name csvs, doc csvs, param csvs, renumber csv, astyle, astyle config
+     [exec] == Recompiling client ==
+     [exec] > Cleaning bin
+     [exec] > Recompiling
+     [exec] - Done in 22.88 seconds
+     [exec] !! Can not find server sources, try decompiling !!
+     [exec] Press any key to continue . . . 
+
+reobfuscate:
+     [exec] == MCP 7.51 (data: 7.51, client: 1.5.2, server: 1.5.2) ==
+     [exec] "scalac" is not found on the PATH.  Scala files will not be recompiled
+     [exec] # found ff, ff patches, srgs, name csvs, doc csvs, param csvs, renumber csv, astyle, astyle config
+     [exec] > Creating Retroguard maping files
+     [exec] > Creating Retroguard config files
+     [exec] == Reobfuscating client ==
+     [exec] > Cleaning reobf
+     [exec] > Generating md5s
+     [exec] > Packing jar
+     [exec] > Reobfuscating jar
+     [exec] > Extracting modified classes
+     [exec] > New class found      : altenergy/core/proxy/CommonProxy
+     [exec] > New class found      : thermalexpansion/api/tileentity/IAccessControl
+     [exec] > New class found      : ic2/api/energy/tile/IEnergySink
+     [exec] > New class found      : thermalexpansion/api/ThermalExpansionInfo
+     [exec] > New class found      : altenergy/configuration/ConfigurationSettings
+     [exec] > New class found      : altenergy/core/handlers/LocalizationHandler
+     [exec] > New class found      : ic2/api/energy/tile/IEnergyEmitter
+     [exec] > New class found      : altenergy/blocks/BlockStrangeCrystalOre
+     [exec] > New class found      : altenergy/core/handlers/AltEnergyHooks
+     [exec] > New class found      : mekanism/api/IStrictEnergyAcceptor
+     [exec] > New class found      : thermalexpansion/api/tileentity/ISidedBlockTexture
+     [exec] > New class found      : altenergy/core/misc/BlockContainerAE
+     [exec] > New class found      : altenergy/content/conductors/BlockDataCable
+     [exec] > New class found      : universalelectricity/prefab/implement/IRotatable
+     [exec] > New class found      : mekanism/api/ITubeConnection
+     [exec] > New class found      : ic2/api/energy/event/EnergyTileUnloadEvent
+     [exec] > New class found      : altenergy/core/misc/IWirelessPowerMachine
+     [exec] > New class found      : universalelectricity/prefab/block/BlockAdvanced
+     [exec] > New class found      : altenergy/worldGen/WorldGenAnyMinable
+     [exec] > New class found      : thermalexpansion/api/item/ItemRegistry
+     [exec] > New class found      : altenergy/content/minipowercore/TileMiniPowerCore
+     [exec] > New class found      : thermalexpansion/api/crafting/ITransposerRecipe
+     [exec] > New class found      : thermalexpansion/api/crafting/ICrucibleManager
+     [exec] > New class found      : ic2/api/item/IElectricItem
+     [exec] > New class found      : mekanism/api/IStrictEnergyStorage
+     [exec] > New class found      : altenergy/items/ModItems
+     [exec] > New class found      : universalelectricity/core/block/INetworkProvider
+     [exec] > New class found      : universalelectricity/prefab/tile/TileEntityElectricityRunnable
+     [exec] > New class found      : mekanism/api/IAccessibleGui
+     [exec] > New class found      : mekanism/api/ICableOutputter
+     [exec] > New class found      : altenergy/content/conductors/TileEnergyBusway
+     [exec] > New class found      : altenergy/items/ItemGraniteBrickBlock
+     [exec] > New class found      : altenergy/client/model/ModelEnergyBusway
+     [exec] > New class found      : universalelectricity/prefab/GuiBase
+     [exec] > New class found      : universalelectricity/prefab/tile/TileEntityElectricityStorage
+     [exec] > New class found      : altenergy/client/render/tileentity/TileEntityEnergyBuswayRenderer
+     [exec] > New class found      : altenergy/blocks/BlockGraniteDec
+     [exec] > New class found      : altenergy/content/minipowercore/BlockMiniPowerCore
+     [exec] > New class found      : mekanism/api/EnumColor
+     [exec] > New class found      : altenergy/items/ItemGems
+     [exec] > New class found      : universalelectricity/prefab/network/IPacketReceiver
+     [exec] > New class found      : altenergy/lib/Commands
+     [exec] > New class found      : ic2/api/reactor/IReactorChamber
+     [exec] > New class found      : altenergy/client/render/item/ModelEnergyCrystals
+     [exec] > New class found      : thermalexpansion/api/tileentity/IReconfigurableSides
+     [exec] > New class found      : thermalexpansion/api/crafting/CraftingHelpers
+     [exec] > New class found      : universalelectricity/core/block/IConnectionProvider
+     [exec] > New class found      : ic2/api/event/RetextureEvent
+     [exec] > New class found      : universalelectricity/prefab/CustomDamageSource
+     [exec] > New class found      : universalelectricity/prefab/multiblock/TileEntityMulti
+     [exec] > New class found      : universalelectricity/core/path/IPathCallBack
+     [exec] > New class found      : mekanism/api/TabProxy
+     [exec] > New class found      : altenergy/blocks/BlockGranite
+     [exec] > New class found      : universalelectricity/prefab/ore/OreGenReplace
+     [exec] > New inner class found: universalelectricity/core/electricity/ElectricityDisplay$MeasurementUnit
+     [exec] > New inner class found: altenergy/client/render/item/ItemEnergyCrystalRenderer$1
+     [exec] > New class found      : universalelectricity/prefab/tile/TileEntityAdvanced
+     [exec] > New class found      : universalelectricity/core/item/ElectricItemHelper
+     [exec] > New class found      : altenergy/client/gui/GuiMiniPowerCore
+     [exec] > New class found      : altenergy/lib/GuiIds
+     [exec] > New class found      : ic2/api/network/INetworkTileEntityEventListener
+     [exec] > New class found      : ic2/api/item/IMetalArmor
+     [exec] > New class found      : ic2/api/network/NetworkHelper
+     [exec] > New class found      : universalelectricity/prefab/block/BlockRotatable
+     [exec] > New class found      : universalelectricity/core/item/ItemElectric
+     [exec] > New class found      : mekanism/api/EnumGas
+     [exec] > New class found      : thermalexpansion/api/crafting/ICrucibleRecipe
+     [exec] > New class found      : ic2/api/info/IFuelValueProvider
+     [exec] > New class found      : altenergy/core/misc/PowerCoreState
+     [exec] > New inner class found: altenergy/recipes/RecipeHandler$Recipe
+     [exec] > New class found      : universalelectricity/prefab/block/BlockConductor
+     [exec] > New class found      : ic2/api/energy/tile/IEnergyAcceptor
+     [exec] > New class found      : ic2/api/tile/ExplosionWhitelist
+     [exec] > New class found      : altenergy/items/ItemDusts
+     [exec] > New class found      : altenergy/core/misc/TileCore
+     [exec] > New class found      : mekanism/api/InfuseObject
+     [exec] > New class found      : altenergy/content/conductors/BlockEnergyBusway
+     [exec] > New class found      : mekanism/api/InfusionOutput
+     [exec] > New class found      : mekanism/api/IPressurizedTube
+     [exec] > New class found      : ic2/api/info/IEnergyValueProvider
+     [exec] > New class found      : ic2/api/tile/IWrenchable
+     [exec] > New class found      : ic2/api/Direction
+     [exec] > New class found      : altenergy/core/misc/TileAE
+     [exec] > New class found      : altenergy/content/mbpowercore/TileMBPowerCore
+     [exec] > New class found      : altenergy/content/scalertransmiter/TileScalerEnergyTransmiter
+     [exec] > New class found      : altenergy/recipes/Recipes
+     [exec] > New class found      : altenergy/content/minipowercore/ContainerMiniPowerCore
+     [exec] > New class found      : ic2/api/item/IElectricItemManager
+     [exec] > New class found      : altenergy/lib/Sounds
+     [exec] > New class found      : universalelectricity/prefab/ore/OreGenerator
+     [exec] > New class found      : universalelectricity/prefab/network/PacketManager
+     [exec] > New class found      : altenergy/content/controllers/TileControllerFF
+     [exec] > New class found      : mekanism/api/InfuseRegistry
+     [exec] > New class found      : universalelectricity/prefab/TranslationHelper
+     [exec] > New class found      : altenergy/items/ItemEnergyCrystals
+     [exec] > New class found      : ic2/api/recipe/Recipes
+     [exec] > New class found      : altenergy/content/conductors/ItemBlockEnergyBusway
+     [exec] > New class found      : ic2/api/crops/ICropTile
+     [exec] > New class found      : universalelectricity/core/UniversalElectricity
+     [exec] > New class found      : mekanism/api/IGasAcceptor
+     [exec] > New class found      : universalelectricity/prefab/ore/OreGenReplaceStone
+     [exec] > New class found      : universalelectricity/prefab/multiblock/IBlockActivate
+     [exec] > New class found      : ic2/api/network/INetworkDataProvider
+     [exec] > New class found      : altenergy/content/ModContent
+     [exec] > New class found      : mekanism/api/InfuseType
+     [exec] > New class found      : ic2/api/recipe/ICraftingRecipeManager
+     [exec] > New class found      : universalelectricity/prefab/flag/NBTFileLoader
+     [exec] > New class found      : ic2/api/crops/CropCard
+     [exec] > New class found      : thermalexpansion/api/item/IChargeableItem
+     [exec] > New class found      : ic2/api/energy/event/EnergyTileLoadEvent
+     [exec] > New class found      : universalelectricity/core/electricity/ElectricityPack
+     [exec] > New class found      : universalelectricity/core/block/IVoltage
+     [exec] > New class found      : universalelectricity/core/vector/VectorHelper
+     [exec] > New class found      : altenergy/core/hooks/AEHooks
+     [exec] > New class found      : universalelectricity/prefab/flag/FlagRegion
+     [exec] > New class found      : altenergy/client/gui/GuiControllerPC
+     [exec] > New class found      : mekanism/api/IConfigurable
+     [exec] > New class found      : ic2/api/energy/tile/IEnergyTile
+     [exec] > New class found      : ic2/api/recipe/IListRecipeManager
+     [exec] > New class found      : universalelectricity/core/vector/Vector2
+     [exec] > New class found      : universalelectricity/core/vector/Vector3
+     [exec] > New class found      : universalelectricity/prefab/multiblock/IMultiBlock
+     [exec] > New class found      : ic2/api/item/Items
+     [exec] > New class found      : altenergy/content/controllers/BlockControllerFF
+     [exec] > New class found      : ic2/api/network/INetworkClientTileEntityEventListener
+     [exec] > New class found      : altenergy/core/proxy/ClientProxy
+     [exec] > New class found      : universalelectricity/prefab/implement/IRedstoneProvider
+     [exec] > New class found      : ic2/api/event/PaintEvent
+     [exec] > New class found      : ic2/api/crops/Crops
+     [exec] > New class found      : altenergy/lib/BlockIds
+     [exec] > New class found      : universalelectricity/core/block/IConductor
+     [exec] > New class found      : ic2/api/energy/EnergyNet
+     [exec] > New class found      : altenergy/content/powerregulator/BlockPowerRegulator
+     [exec] > New class found      : mekanism/api/SideData
+     [exec] > New class found      : ic2/api/crops/BaseSeed
+     [exec] > New class found      : altenergy/blocks/ModBlocks
+     [exec] > New class found      : universalelectricity/prefab/tile/TileEntityConductor
+     [exec] > New class found      : thermalexpansion/api/crafting/CraftingManagers
+     [exec] > New class found      : ic2/api/item/ISpecialElectricItem
+     [exec] > New class found      : thermalexpansion/api/crafting/ISawmillRecipe
+     [exec] > New class found      : universalelectricity/core/electricity/ElectricityNetworkHelper
+     [exec] > New class found      : universalelectricity/prefab/implement/IToolConfigurator
+     [exec] > New class found      : universalelectricity/prefab/ore/OreGenBase
+     [exec] > New class found      : altenergy/creativetab/CreativeTabAE
+     [exec] > New inner class found: mekanism/api/GasTransferProtocol$GasTransferEvent
+     [exec] > New class found      : thermalexpansion/api/crafting/IPulverizerManager
+     [exec] > New class found      : altenergy/items/ItemMetaBlock
+     [exec] > New class found      : universalelectricity/core/block/IElectricityStorage
+     [exec] > New class found      : universalelectricity/prefab/flag/FlagWorld
+     [exec] > New class found      : ic2/api/tile/IEnergyStorage
+     [exec] > New class found      : ic2/api/reactor/IReactor
+     [exec] > New class found      : mekanism/api/RecipeHelper
+     [exec] > New class found      : altenergy/content/scalertransmiter/BlockScalerEnergyTransmiter
+     [exec] > New class found      : ic2/api/info/Info
+     [exec] > New class found      : ic2/api/network/INetworkUpdateListener
+     [exec] > New class found      : mekanism/api/IUpgradeManagement
+     [exec] > New class found      : universalelectricity/prefab/tile/TileEntityDisableable
+     [exec] > New class found      : altenergy/client/render/item/ItemEnergyBuswayRenderer
+     [exec] > New class found      : altenergy/content/controllers/BlockController
+     [exec] > New class found      : mekanism/api/IUniversalCable
+     [exec] > New class found      : universalelectricity/core/item/IItemVoltage
+     [exec] > New class found      : universalelectricity/core/item/IItemElectricityStorage
+     [exec] > New class found      : thermalexpansion/api/crafting/ISmelterManager
+     [exec] > New class found      : universalelectricity/prefab/potion/CustomPotionEffect
+     [exec] > New class found      : universalelectricity/core/electricity/ElectricityNetwork
+     [exec] > New class found      : altenergy/content/controllers/TileControllerPC
+     [exec] > New class found      : universalelectricity/prefab/tile/TileEntityElectrical
+     [exec] > New class found      : universalelectricity/core/item/IItemElectric
+     [exec] > New class found      : ic2/api/energy/tile/IEnergySource
+     [exec] > New class found      : universalelectricity/prefab/vector/Region2
+     [exec] > New class found      : universalelectricity/prefab/vector/Region3
+     [exec] > New class found      : ic2/api/recipe/IMachineRecipeManager
+     [exec] > New class found      : universalelectricity/core/electricity/IElectricityNetwork
+     [exec] > New class found      : universalelectricity/prefab/implement/IRedstoneReceptor
+     [exec] > New class found      : universalelectricity/prefab/implement/ITier
+     [exec] > New class found      : universalelectricity/prefab/flag/FlagBase
+     [exec] > New class found      : altenergy/lib/Reference
+     [exec] > New class found      : altenergy/core/misc/BlockAE
+     [exec] > New class found      : mekanism/api/ItemRetriever
+     [exec] > New class found      : altenergy/core/util/AltEnergyUtils
+     [exec] > New class found      : mekanism/api/IMechanicalPipe
+     [exec] > New class found      : ic2/api/energy/event/EnergyTileSourceEvent
+     [exec] > New class found      : altenergy/configuration/ConfigurationHandler
+     [exec] > New class found      : universalelectricity/core/path/Pathfinder
+     [exec] > New class found      : altenergy/content/junctionbox/BlockJunctionBox
+     [exec] > New class found      : universalelectricity/core/electricity/ElectricityDisplay
+     [exec] > New class found      : universalelectricity/prefab/flag/CommandFlag
+     [exec] > New class found      : thermalexpansion/api/crafting/IPulverizerRecipe
+     [exec] > New class found      : altenergy/content/conductors/TileEnergyCable
+     [exec] > New class found      : universalelectricity/prefab/potion/CustomPotion
+     [exec] > New class found      : altenergy/content/controllers/BlockControllerPC
+     [exec] > New class found      : ic2/api/item/ElectricItem
+     [exec] > New class found      : altenergy/items/ItemBase
+     [exec] > New class found      : mekanism/api/EnergizedItemManager
+     [exec] > New class found      : ic2/api/network/INetworkItemEventListener
+     [exec] > New class found      : thermalexpansion/api/crafting/IFurnaceRecipe
+     [exec] > New class found      : universalelectricity/prefab/SlotSpecific
+     [exec] > New class found      : altenergy/lib/Textures
+     [exec] > New class found      : altenergy/core/misc/ItemAE
+     [exec] > New class found      : universalelectricity/prefab/multiblock/BlockMulti
+     [exec] > New class found      : altenergy/lib/ItemUpdateTypes
+     [exec] > New class found      : thermalexpansion/api/crafting/ITransposerManager
+     [exec] > New class found      : altenergy/lib/RenderIds
+     [exec] > New class found      : ic2/api/energy/tile/IEnergyConductor
+     [exec] > New class found      : ic2/api/item/ITerraformingBP
+     [exec] > New class found      : universalelectricity/prefab/RecipeHelper
+     [exec] > New class found      : mekanism/api/IEnergizedItem
+     [exec] > New class found      : thermalexpansion/api/crafting/ISmelterRecipe
+     [exec] > New inner class found: altenergy/client/render/item/ItemEnergyBuswayRenderer$1
+     [exec] > New class found      : ic2/api/energy/event/EnergyTileEvent
+     [exec] > New class found      : altenergy/lib/Localizations
+     [exec] > New class found      : altenergy/content/forcefielddoor/BlockEmiterFF
+     [exec] > New class found      : universalelectricity/core/block/IConnector
+     [exec] > New class found      : ic2/api/item/ICustomElectricItem
+     [exec] > New class found      : thermalexpansion/api/tileentity/IRedstoneControl
+     [exec] > New class found      : altenergy/lib/Strings
+     [exec] > New class found      : altenergy/AltEnergy
+     [exec] > New class found      : altenergy/items/ItemBase3D
+     [exec] > New class found      : altenergy/client/render/item/ItemEnergyCrystalRenderer
+     [exec] > New class found      : mekanism/api/GasTransferProtocol
+     [exec] > New class found      : mekanism/api/IStorageTank
+     [exec] > New class found      : altenergy/recipes/RecipeHandler
+     [exec] > New class found      : altenergy/items/ItemStrangeCrystal
+     [exec] > New class found      : mekanism/api/GasTransmission
+     [exec] > New class found      : mekanism/api/InfusionInput
+     [exec] > New class found      : thermalexpansion/api/crafting/ISawmillManager
+     [exec] > New inner class found: universalelectricity/core/path/PathfinderChecker$1
+     [exec] > New class found      : universalelectricity/prefab/flag/FlagRegistry
+     [exec] > New class found      : thermalexpansion/api/crafting/IFurnaceManager
+     [exec] > New class found      : ic2/api/item/ItemWrapper
+     [exec] > New class found      : altenergy/core/util/LocalizationUtil
+     [exec] > New class found      : altenergy/lib/ItemIds
+     [exec] > New class found      : mekanism/api/IGasStorage
+     [exec] > New class found      : universalelectricity/core/path/PathfinderAStar
+     [exec] > New class found      : altenergy/lib/Models
+     [exec] > New class found      : universalelectricity/prefab/flag/Flag
+     [exec] > New class found      : universalelectricity/core/electricity/IConductorRegistry
+     [exec] > New class found      : ic2/api/reactor/IC2Reactor
+     [exec] > New class found      : thermalexpansion/api/tileentity/ITesseract
+     [exec] > New class found      : ic2/api/reactor/IReactorComponent
+     [exec] > New class found      : universalelectricity/core/path/PathfinderChecker
+     [exec] > New inner class found: universalelectricity/prefab/network/PacketManager$PacketType
+     [exec] > New class found      : altenergy/blocks/BlockGraniteBrick
+     [exec] > New class found      : thermalexpansion/api/tileentity/IReconfigurableFacing
+     [exec] > New inner class found: universalelectricity/core/electricity/ElectricityDisplay$ElectricUnit
+     [exec] > New class found      : altenergy/content/conductors/BlockUtilBundle
+     [exec] > New class found      : altenergy/worldGen/WorldGenManager
+     [exec] > New class found      : ic2/api/item/IBoxable
+     [exec] > New class found      : mekanism/api/Object3D
+     [exec] > New inner class found: altenergy/core/util/AltEnergyUtils$1
+     [exec] > New class found      : universalelectricity/prefab/flag/ModFlag
+     [exec] > New class found      : universalelectricity/prefab/implement/IDisableable
+     [exec] > Outputted altenergy/core/proxy/CommonProxy    to reobf\minecraft as altenergy/core/proxy/CommonProxy.class
+     [exec] > Outputted thermalexpansion/api/tileentity/IAccessControl to reobf\minecraft as thermalexpansion/api/tileentity/IAccessControl.class
+     [exec] > Outputted ic2/api/energy/tile/IEnergySink     to reobf\minecraft as ic2/api/energy/tile/IEnergySink.class
+     [exec] > Outputted thermalexpansion/api/ThermalExpansionInfo to reobf\minecraft as thermalexpansion/api/ThermalExpansionInfo.class
+     [exec] > Outputted altenergy/configuration/ConfigurationSettings to reobf\minecraft as altenergy/configuration/ConfigurationSettings.class
+     [exec] > Outputted altenergy/core/handlers/LocalizationHandler to reobf\minecraft as altenergy/core/handlers/LocalizationHandler.class
+     [exec] > Outputted ic2/api/energy/tile/IEnergyEmitter  to reobf\minecraft as ic2/api/energy/tile/IEnergyEmitter.class
+     [exec] > Outputted altenergy/blocks/BlockStrangeCrystalOre to reobf\minecraft as altenergy/blocks/BlockStrangeCrystalOre.class
+     [exec] > Outputted altenergy/core/handlers/AltEnergyHooks to reobf\minecraft as altenergy/core/handlers/AltEnergyHooks.class
+     [exec] > Outputted mekanism/api/IStrictEnergyAcceptor  to reobf\minecraft as mekanism/api/IStrictEnergyAcceptor.class
+     [exec] > Outputted thermalexpansion/api/tileentity/ISidedBlockTexture to reobf\minecraft as thermalexpansion/api/tileentity/ISidedBlockTexture.class
+     [exec] > Outputted altenergy/core/misc/BlockContainerAE to reobf\minecraft as altenergy/core/misc/BlockContainerAE.class
+     [exec] > Outputted altenergy/content/conductors/BlockDataCable to reobf\minecraft as altenergy/content/conductors/BlockDataCable.class
+     [exec] > Outputted universalelectricity/prefab/implement/IRotatable to reobf\minecraft as universalelectricity/prefab/implement/IRotatable.class
+     [exec] > Outputted mekanism/api/ITubeConnection        to reobf\minecraft as mekanism/api/ITubeConnection.class
+     [exec] > Outputted ic2/api/energy/event/EnergyTileUnloadEvent to reobf\minecraft as ic2/api/energy/event/EnergyTileUnloadEvent.class
+     [exec] > Outputted altenergy/core/misc/IWirelessPowerMachine to reobf\minecraft as altenergy/core/misc/IWirelessPowerMachine.class
+     [exec] > Outputted universalelectricity/prefab/block/BlockAdvanced to reobf\minecraft as universalelectricity/prefab/block/BlockAdvanced.class
+     [exec] > Outputted altenergy/worldGen/WorldGenAnyMinable to reobf\minecraft as altenergy/worldGen/WorldGenAnyMinable.class
+     [exec] > Outputted thermalexpansion/api/item/ItemRegistry to reobf\minecraft as thermalexpansion/api/item/ItemRegistry.class
+     [exec] > Outputted altenergy/content/minipowercore/TileMiniPowerCore to reobf\minecraft as altenergy/content/minipowercore/TileMiniPowerCore.class
+     [exec] > Outputted thermalexpansion/api/crafting/ITransposerRecipe to reobf\minecraft as thermalexpansion/api/crafting/ITransposerRecipe.class
+     [exec] > Outputted thermalexpansion/api/crafting/ICrucibleManager to reobf\minecraft as thermalexpansion/api/crafting/ICrucibleManager.class
+     [exec] > Outputted ic2/api/item/IElectricItem          to reobf\minecraft as ic2/api/item/IElectricItem.class
+     [exec] > Outputted mekanism/api/IStrictEnergyStorage   to reobf\minecraft as mekanism/api/IStrictEnergyStorage.class
+     [exec] > Outputted altenergy/items/ModItems            to reobf\minecraft as altenergy/items/ModItems.class
+     [exec] > Outputted universalelectricity/core/block/INetworkProvider to reobf\minecraft as universalelectricity/core/block/INetworkProvider.class
+     [exec] > Outputted universalelectricity/prefab/tile/TileEntityElectricityRunnable to reobf\minecraft as universalelectricity/prefab/tile/TileEntityElectricityRunnable.class
+     [exec] > Outputted mekanism/api/IAccessibleGui         to reobf\minecraft as mekanism/api/IAccessibleGui.class
+     [exec] > Outputted mekanism/api/ICableOutputter        to reobf\minecraft as mekanism/api/ICableOutputter.class
+     [exec] > Outputted altenergy/content/conductors/TileEnergyBusway to reobf\minecraft as altenergy/content/conductors/TileEnergyBusway.class
+     [exec] > Outputted altenergy/items/ItemGraniteBrickBlock to reobf\minecraft as altenergy/items/ItemGraniteBrickBlock.class
+     [exec] > Outputted altenergy/client/model/ModelEnergyBusway to reobf\minecraft as altenergy/client/model/ModelEnergyBusway.class
+     [exec] > Outputted universalelectricity/prefab/GuiBase to reobf\minecraft as universalelectricity/prefab/GuiBase.class
+     [exec] > Outputted universalelectricity/prefab/tile/TileEntityElectricityStorage to reobf\minecraft as universalelectricity/prefab/tile/TileEntityElectricityStorage.class
+     [exec] > Outputted altenergy/client/render/tileentity/TileEntityEnergyBuswayRenderer to reobf\minecraft as altenergy/client/render/tileentity/TileEntityEnergyBuswayRenderer.class
+     [exec] > Outputted altenergy/blocks/BlockGraniteDec    to reobf\minecraft as altenergy/blocks/BlockGraniteDec.class
+     [exec] > Outputted altenergy/content/minipowercore/BlockMiniPowerCore to reobf\minecraft as altenergy/content/minipowercore/BlockMiniPowerCore.class
+     [exec] > Outputted mekanism/api/EnumColor              to reobf\minecraft as mekanism/api/EnumColor.class
+     [exec] > Outputted altenergy/items/ItemGems            to reobf\minecraft as altenergy/items/ItemGems.class
+     [exec] > Outputted universalelectricity/prefab/network/IPacketReceiver to reobf\minecraft as universalelectricity/prefab/network/IPacketReceiver.class
+     [exec] > Outputted altenergy/lib/Commands              to reobf\minecraft as altenergy/lib/Commands.class
+     [exec] > Outputted ic2/api/reactor/IReactorChamber     to reobf\minecraft as ic2/api/reactor/IReactorChamber.class
+     [exec] > Outputted altenergy/client/render/item/ModelEnergyCrystals to reobf\minecraft as altenergy/client/render/item/ModelEnergyCrystals.class
+     [exec] > Outputted thermalexpansion/api/tileentity/IReconfigurableSides to reobf\minecraft as thermalexpansion/api/tileentity/IReconfigurableSides.class
+     [exec] > Outputted thermalexpansion/api/crafting/CraftingHelpers to reobf\minecraft as thermalexpansion/api/crafting/CraftingHelpers.class
+     [exec] > Outputted universalelectricity/core/block/IConnectionProvider to reobf\minecraft as universalelectricity/core/block/IConnectionProvider.class
+     [exec] > Outputted ic2/api/event/RetextureEvent        to reobf\minecraft as ic2/api/event/RetextureEvent.class
+     [exec] > Outputted universalelectricity/prefab/CustomDamageSource to reobf\minecraft as universalelectricity/prefab/CustomDamageSource.class
+     [exec] > Outputted universalelectricity/prefab/multiblock/TileEntityMulti to reobf\minecraft as universalelectricity/prefab/multiblock/TileEntityMulti.class
+     [exec] > Outputted universalelectricity/core/path/IPathCallBack to reobf\minecraft as universalelectricity/core/path/IPathCallBack.class
+     [exec] > Outputted mekanism/api/TabProxy               to reobf\minecraft as mekanism/api/TabProxy.class
+     [exec] > Outputted altenergy/blocks/BlockGranite       to reobf\minecraft as altenergy/blocks/BlockGranite.class
+     [exec] > Outputted universalelectricity/prefab/ore/OreGenReplace to reobf\minecraft as universalelectricity/prefab/ore/OreGenReplace.class
+     [exec] > Outputted universalelectricity/core/electricity/ElectricityDisplay$MeasurementUnit to reobf\minecraft as universalelectricity/core/electricity/ElectricityDisplay$MeasurementUnit.class
+     [exec] > Outputted altenergy/client/render/item/ItemEnergyCrystalRenderer$1 to reobf\minecraft as altenergy/client/render/item/ItemEnergyCrystalRenderer$1.class
+     [exec] > Outputted universalelectricity/prefab/tile/TileEntityAdvanced to reobf\minecraft as universalelectricity/prefab/tile/TileEntityAdvanced.class
+     [exec] > Outputted universalelectricity/core/item/ElectricItemHelper to reobf\minecraft as universalelectricity/core/item/ElectricItemHelper.class
+     [exec] > Outputted altenergy/client/gui/GuiMiniPowerCore to reobf\minecraft as altenergy/client/gui/GuiMiniPowerCore.class
+     [exec] > Outputted altenergy/lib/GuiIds                to reobf\minecraft as altenergy/lib/GuiIds.class
+     [exec] > Outputted ic2/api/network/INetworkTileEntityEventListener to reobf\minecraft as ic2/api/network/INetworkTileEntityEventListener.class
+     [exec] > Outputted ic2/api/item/IMetalArmor            to reobf\minecraft as ic2/api/item/IMetalArmor.class
+     [exec] > Outputted ic2/api/network/NetworkHelper       to reobf\minecraft as ic2/api/network/NetworkHelper.class
+     [exec] > Outputted universalelectricity/prefab/block/BlockRotatable to reobf\minecraft as universalelectricity/prefab/block/BlockRotatable.class
+     [exec] > Outputted universalelectricity/core/item/ItemElectric to reobf\minecraft as universalelectricity/core/item/ItemElectric.class
+     [exec] > Outputted mekanism/api/EnumGas                to reobf\minecraft as mekanism/api/EnumGas.class
+     [exec] > Outputted thermalexpansion/api/crafting/ICrucibleRecipe to reobf\minecraft as thermalexpansion/api/crafting/ICrucibleRecipe.class
+     [exec] > Outputted ic2/api/info/IFuelValueProvider     to reobf\minecraft as ic2/api/info/IFuelValueProvider.class
+     [exec] > Outputted altenergy/core/misc/PowerCoreState  to reobf\minecraft as altenergy/core/misc/PowerCoreState.class
+     [exec] > Outputted altenergy/recipes/RecipeHandler$Recipe to reobf\minecraft as altenergy/recipes/RecipeHandler$Recipe.class
+     [exec] > Outputted universalelectricity/prefab/block/BlockConductor to reobf\minecraft as universalelectricity/prefab/block/BlockConductor.class
+     [exec] > Outputted ic2/api/energy/tile/IEnergyAcceptor to reobf\minecraft as ic2/api/energy/tile/IEnergyAcceptor.class
+     [exec] > Outputted ic2/api/tile/ExplosionWhitelist     to reobf\minecraft as ic2/api/tile/ExplosionWhitelist.class
+     [exec] > Outputted altenergy/items/ItemDusts           to reobf\minecraft as altenergy/items/ItemDusts.class
+     [exec] > Outputted altenergy/core/misc/TileCore        to reobf\minecraft as altenergy/core/misc/TileCore.class
+     [exec] > Outputted mekanism/api/InfuseObject           to reobf\minecraft as mekanism/api/InfuseObject.class
+     [exec] > Outputted altenergy/content/conductors/BlockEnergyBusway to reobf\minecraft as altenergy/content/conductors/BlockEnergyBusway.class
+     [exec] > Outputted mekanism/api/InfusionOutput         to reobf\minecraft as mekanism/api/InfusionOutput.class
+     [exec] > Outputted mekanism/api/IPressurizedTube       to reobf\minecraft as mekanism/api/IPressurizedTube.class
+     [exec] > Outputted ic2/api/info/IEnergyValueProvider   to reobf\minecraft as ic2/api/info/IEnergyValueProvider.class
+     [exec] > Outputted ic2/api/tile/IWrenchable            to reobf\minecraft as ic2/api/tile/IWrenchable.class
+     [exec] > Outputted ic2/api/Direction                   to reobf\minecraft as ic2/api/Direction.class
+     [exec] > Outputted altenergy/core/misc/TileAE          to reobf\minecraft as altenergy/core/misc/TileAE.class
+     [exec] > Outputted altenergy/content/mbpowercore/TileMBPowerCore to reobf\minecraft as altenergy/content/mbpowercore/TileMBPowerCore.class
+     [exec] > Outputted altenergy/content/scalertransmiter/TileScalerEnergyTransmiter to reobf\minecraft as altenergy/content/scalertransmiter/TileScalerEnergyTransmiter.class
+     [exec] > Outputted altenergy/recipes/Recipes           to reobf\minecraft as altenergy/recipes/Recipes.class
+     [exec] > Outputted altenergy/content/minipowercore/ContainerMiniPowerCore to reobf\minecraft as altenergy/content/minipowercore/ContainerMiniPowerCore.class
+     [exec] > Outputted ic2/api/item/IElectricItemManager   to reobf\minecraft as ic2/api/item/IElectricItemManager.class
+     [exec] > Outputted altenergy/lib/Sounds                to reobf\minecraft as altenergy/lib/Sounds.class
+     [exec] > Outputted universalelectricity/prefab/ore/OreGenerator to reobf\minecraft as universalelectricity/prefab/ore/OreGenerator.class
+     [exec] > Outputted universalelectricity/prefab/network/PacketManager to reobf\minecraft as universalelectricity/prefab/network/PacketManager.class
+     [exec] > Outputted altenergy/content/controllers/TileControllerFF to reobf\minecraft as altenergy/content/controllers/TileControllerFF.class
+     [exec] > Outputted mekanism/api/InfuseRegistry         to reobf\minecraft as mekanism/api/InfuseRegistry.class
+     [exec] > Outputted universalelectricity/prefab/TranslationHelper to reobf\minecraft as universalelectricity/prefab/TranslationHelper.class
+     [exec] > Outputted altenergy/items/ItemEnergyCrystals  to reobf\minecraft as altenergy/items/ItemEnergyCrystals.class
+     [exec] > Outputted ic2/api/recipe/Recipes              to reobf\minecraft as ic2/api/recipe/Recipes.class
+     [exec] > Outputted altenergy/content/conductors/ItemBlockEnergyBusway to reobf\minecraft as altenergy/content/conductors/ItemBlockEnergyBusway.class
+     [exec] > Outputted ic2/api/crops/ICropTile             to reobf\minecraft as ic2/api/crops/ICropTile.class
+     [exec] > Outputted universalelectricity/core/UniversalElectricity to reobf\minecraft as universalelectricity/core/UniversalElectricity.class
+     [exec] > Outputted mekanism/api/IGasAcceptor           to reobf\minecraft as mekanism/api/IGasAcceptor.class
+     [exec] > Outputted universalelectricity/prefab/ore/OreGenReplaceStone to reobf\minecraft as universalelectricity/prefab/ore/OreGenReplaceStone.class
+     [exec] > Outputted universalelectricity/prefab/multiblock/IBlockActivate to reobf\minecraft as universalelectricity/prefab/multiblock/IBlockActivate.class
+     [exec] > Outputted ic2/api/network/INetworkDataProvider to reobf\minecraft as ic2/api/network/INetworkDataProvider.class
+     [exec] > Outputted altenergy/content/ModContent        to reobf\minecraft as altenergy/content/ModContent.class
+     [exec] > Outputted mekanism/api/InfuseType             to reobf\minecraft as mekanism/api/InfuseType.class
+     [exec] > Outputted ic2/api/recipe/ICraftingRecipeManager to reobf\minecraft as ic2/api/recipe/ICraftingRecipeManager.class
+     [exec] > Outputted universalelectricity/prefab/flag/NBTFileLoader to reobf\minecraft as universalelectricity/prefab/flag/NBTFileLoader.class
+     [exec] > Outputted ic2/api/crops/CropCard              to reobf\minecraft as ic2/api/crops/CropCard.class
+     [exec] > Outputted thermalexpansion/api/item/IChargeableItem to reobf\minecraft as thermalexpansion/api/item/IChargeableItem.class
+     [exec] > Outputted ic2/api/energy/event/EnergyTileLoadEvent to reobf\minecraft as ic2/api/energy/event/EnergyTileLoadEvent.class
+     [exec] > Outputted universalelectricity/core/electricity/ElectricityPack to reobf\minecraft as universalelectricity/core/electricity/ElectricityPack.class
+     [exec] > Outputted universalelectricity/core/block/IVoltage to reobf\minecraft as universalelectricity/core/block/IVoltage.class
+     [exec] > Outputted universalelectricity/core/vector/VectorHelper to reobf\minecraft as universalelectricity/core/vector/VectorHelper.class
+     [exec] > Outputted altenergy/core/hooks/AEHooks        to reobf\minecraft as altenergy/core/hooks/AEHooks.class
+     [exec] > Outputted universalelectricity/prefab/flag/FlagRegion to reobf\minecraft as universalelectricity/prefab/flag/FlagRegion.class
+     [exec] > Outputted altenergy/client/gui/GuiControllerPC to reobf\minecraft as altenergy/client/gui/GuiControllerPC.class
+     [exec] > Outputted mekanism/api/IConfigurable          to reobf\minecraft as mekanism/api/IConfigurable.class
+     [exec] > Outputted ic2/api/energy/tile/IEnergyTile     to reobf\minecraft as ic2/api/energy/tile/IEnergyTile.class
+     [exec] > Outputted ic2/api/recipe/IListRecipeManager   to reobf\minecraft as ic2/api/recipe/IListRecipeManager.class
+     [exec] > Outputted universalelectricity/core/vector/Vector2 to reobf\minecraft as universalelectricity/core/vector/Vector2.class
+     [exec] > Outputted universalelectricity/core/vector/Vector3 to reobf\minecraft as universalelectricity/core/vector/Vector3.class
+     [exec] > Outputted universalelectricity/prefab/multiblock/IMultiBlock to reobf\minecraft as universalelectricity/prefab/multiblock/IMultiBlock.class
+     [exec] > Outputted ic2/api/item/Items                  to reobf\minecraft as ic2/api/item/Items.class
+     [exec] > Outputted altenergy/content/controllers/BlockControllerFF to reobf\minecraft as altenergy/content/controllers/BlockControllerFF.class
+     [exec] > Outputted ic2/api/network/INetworkClientTileEntityEventListener to reobf\minecraft as ic2/api/network/INetworkClientTileEntityEventListener.class
+     [exec] > Outputted altenergy/core/proxy/ClientProxy    to reobf\minecraft as altenergy/core/proxy/ClientProxy.class
+     [exec] > Outputted universalelectricity/prefab/implement/IRedstoneProvider to reobf\minecraft as universalelectricity/prefab/implement/IRedstoneProvider.class
+     [exec] > Outputted ic2/api/event/PaintEvent            to reobf\minecraft as ic2/api/event/PaintEvent.class
+     [exec] > Outputted ic2/api/crops/Crops                 to reobf\minecraft as ic2/api/crops/Crops.class
+     [exec] > Outputted altenergy/lib/BlockIds              to reobf\minecraft as altenergy/lib/BlockIds.class
+     [exec] > Outputted universalelectricity/core/block/IConductor to reobf\minecraft as universalelectricity/core/block/IConductor.class
+     [exec] > Outputted ic2/api/energy/EnergyNet            to reobf\minecraft as ic2/api/energy/EnergyNet.class
+     [exec] > Outputted altenergy/content/powerregulator/BlockPowerRegulator to reobf\minecraft as altenergy/content/powerregulator/BlockPowerRegulator.class
+     [exec] > Outputted mekanism/api/SideData               to reobf\minecraft as mekanism/api/SideData.class
+     [exec] > Outputted ic2/api/crops/BaseSeed              to reobf\minecraft as ic2/api/crops/BaseSeed.class
+     [exec] > Outputted altenergy/blocks/ModBlocks          to reobf\minecraft as altenergy/blocks/ModBlocks.class
+     [exec] > Outputted universalelectricity/prefab/tile/TileEntityConductor to reobf\minecraft as universalelectricity/prefab/tile/TileEntityConductor.class
+     [exec] > Outputted thermalexpansion/api/crafting/CraftingManagers to reobf\minecraft as thermalexpansion/api/crafting/CraftingManagers.class
+     [exec] > Outputted ic2/api/item/ISpecialElectricItem   to reobf\minecraft as ic2/api/item/ISpecialElectricItem.class
+     [exec] > Outputted thermalexpansion/api/crafting/ISawmillRecipe to reobf\minecraft as thermalexpansion/api/crafting/ISawmillRecipe.class
+     [exec] > Outputted universalelectricity/core/electricity/ElectricityNetworkHelper to reobf\minecraft as universalelectricity/core/electricity/ElectricityNetworkHelper.class
+     [exec] > Outputted universalelectricity/prefab/implement/IToolConfigurator to reobf\minecraft as universalelectricity/prefab/implement/IToolConfigurator.class
+     [exec] > Outputted universalelectricity/prefab/ore/OreGenBase to reobf\minecraft as universalelectricity/prefab/ore/OreGenBase.class
+     [exec] > Outputted altenergy/creativetab/CreativeTabAE to reobf\minecraft as altenergy/creativetab/CreativeTabAE.class
+     [exec] > Outputted mekanism/api/GasTransferProtocol$GasTransferEvent to reobf\minecraft as mekanism/api/GasTransferProtocol$GasTransferEvent.class
+     [exec] > Outputted thermalexpansion/api/crafting/IPulverizerManager to reobf\minecraft as thermalexpansion/api/crafting/IPulverizerManager.class
+     [exec] > Outputted altenergy/items/ItemMetaBlock       to reobf\minecraft as altenergy/items/ItemMetaBlock.class
+     [exec] > Outputted universalelectricity/core/block/IElectricityStorage to reobf\minecraft as universalelectricity/core/block/IElectricityStorage.class
+     [exec] > Outputted universalelectricity/prefab/flag/FlagWorld to reobf\minecraft as universalelectricity/prefab/flag/FlagWorld.class
+     [exec] > Outputted ic2/api/tile/IEnergyStorage         to reobf\minecraft as ic2/api/tile/IEnergyStorage.class
+     [exec] > Outputted ic2/api/reactor/IReactor            to reobf\minecraft as ic2/api/reactor/IReactor.class
+     [exec] > Outputted mekanism/api/RecipeHelper           to reobf\minecraft as mekanism/api/RecipeHelper.class
+     [exec] > Outputted altenergy/content/scalertransmiter/BlockScalerEnergyTransmiter to reobf\minecraft as altenergy/content/scalertransmiter/BlockScalerEnergyTransmiter.class
+     [exec] > Outputted ic2/api/info/Info                   to reobf\minecraft as ic2/api/info/Info.class
+     [exec] > Outputted ic2/api/network/INetworkUpdateListener to reobf\minecraft as ic2/api/network/INetworkUpdateListener.class
+     [exec] > Outputted mekanism/api/IUpgradeManagement     to reobf\minecraft as mekanism/api/IUpgradeManagement.class
+     [exec] > Outputted universalelectricity/prefab/tile/TileEntityDisableable to reobf\minecraft as universalelectricity/prefab/tile/TileEntityDisableable.class
+     [exec] > Outputted altenergy/client/render/item/ItemEnergyBuswayRenderer to reobf\minecraft as altenergy/client/render/item/ItemEnergyBuswayRenderer.class
+     [exec] > Outputted altenergy/content/controllers/BlockController to reobf\minecraft as altenergy/content/controllers/BlockController.class
+     [exec] > Outputted mekanism/api/IUniversalCable        to reobf\minecraft as mekanism/api/IUniversalCable.class
+     [exec] > Outputted universalelectricity/core/item/IItemVoltage to reobf\minecraft as universalelectricity/core/item/IItemVoltage.class
+     [exec] > Outputted universalelectricity/core/item/IItemElectricityStorage to reobf\minecraft as universalelectricity/core/item/IItemElectricityStorage.class
+     [exec] > Outputted thermalexpansion/api/crafting/ISmelterManager to reobf\minecraft as thermalexpansion/api/crafting/ISmelterManager.class
+     [exec] > Outputted universalelectricity/prefab/potion/CustomPotionEffect to reobf\minecraft as universalelectricity/prefab/potion/CustomPotionEffect.class
+     [exec] > Outputted universalelectricity/core/electricity/ElectricityNetwork to reobf\minecraft as universalelectricity/core/electricity/ElectricityNetwork.class
+     [exec] > Outputted altenergy/content/controllers/TileControllerPC to reobf\minecraft as altenergy/content/controllers/TileControllerPC.class
+     [exec] > Outputted universalelectricity/prefab/tile/TileEntityElectrical to reobf\minecraft as universalelectricity/prefab/tile/TileEntityElectrical.class
+     [exec] > Outputted universalelectricity/core/item/IItemElectric to reobf\minecraft as universalelectricity/core/item/IItemElectric.class
+     [exec] > Outputted ic2/api/energy/tile/IEnergySource   to reobf\minecraft as ic2/api/energy/tile/IEnergySource.class
+     [exec] > Outputted universalelectricity/prefab/vector/Region2 to reobf\minecraft as universalelectricity/prefab/vector/Region2.class
+     [exec] > Outputted universalelectricity/prefab/vector/Region3 to reobf\minecraft as universalelectricity/prefab/vector/Region3.class
+     [exec] > Outputted ic2/api/recipe/IMachineRecipeManager to reobf\minecraft as ic2/api/recipe/IMachineRecipeManager.class
+     [exec] > Outputted universalelectricity/core/electricity/IElectricityNetwork to reobf\minecraft as universalelectricity/core/electricity/IElectricityNetwork.class
+     [exec] > Outputted universalelectricity/prefab/implement/IRedstoneReceptor to reobf\minecraft as universalelectricity/prefab/implement/IRedstoneReceptor.class
+     [exec] > Outputted universalelectricity/prefab/implement/ITier to reobf\minecraft as universalelectricity/prefab/implement/ITier.class
+     [exec] > Outputted universalelectricity/prefab/flag/FlagBase to reobf\minecraft as universalelectricity/prefab/flag/FlagBase.class
+     [exec] > Outputted altenergy/lib/Reference             to reobf\minecraft as altenergy/lib/Reference.class
+     [exec] > Outputted altenergy/core/misc/BlockAE         to reobf\minecraft as altenergy/core/misc/BlockAE.class
+     [exec] > Outputted mekanism/api/ItemRetriever          to reobf\minecraft as mekanism/api/ItemRetriever.class
+     [exec] > Outputted altenergy/core/util/AltEnergyUtils  to reobf\minecraft as altenergy/core/util/AltEnergyUtils.class
+     [exec] > Outputted mekanism/api/IMechanicalPipe        to reobf\minecraft as mekanism/api/IMechanicalPipe.class
+     [exec] > Outputted ic2/api/energy/event/EnergyTileSourceEvent to reobf\minecraft as ic2/api/energy/event/EnergyTileSourceEvent.class
+     [exec] > Outputted altenergy/configuration/ConfigurationHandler to reobf\minecraft as altenergy/configuration/ConfigurationHandler.class
+     [exec] > Outputted universalelectricity/core/path/Pathfinder to reobf\minecraft as universalelectricity/core/path/Pathfinder.class
+     [exec] > Outputted altenergy/content/junctionbox/BlockJunctionBox to reobf\minecraft as altenergy/content/junctionbox/BlockJunctionBox.class
+     [exec] > Outputted universalelectricity/core/electricity/ElectricityDisplay to reobf\minecraft as universalelectricity/core/electricity/ElectricityDisplay.class
+     [exec] > Outputted universalelectricity/prefab/flag/CommandFlag to reobf\minecraft as universalelectricity/prefab/flag/CommandFlag.class
+     [exec] > Outputted thermalexpansion/api/crafting/IPulverizerRecipe to reobf\minecraft as thermalexpansion/api/crafting/IPulverizerRecipe.class
+     [exec] > Outputted altenergy/content/conductors/TileEnergyCable to reobf\minecraft as altenergy/content/conductors/TileEnergyCable.class
+     [exec] > Outputted universalelectricity/prefab/potion/CustomPotion to reobf\minecraft as universalelectricity/prefab/potion/CustomPotion.class
+     [exec] > Outputted altenergy/content/controllers/BlockControllerPC to reobf\minecraft as altenergy/content/controllers/BlockControllerPC.class
+     [exec] > Outputted ic2/api/item/ElectricItem           to reobf\minecraft as ic2/api/item/ElectricItem.class
+     [exec] > Outputted altenergy/items/ItemBase            to reobf\minecraft as altenergy/items/ItemBase.class
+     [exec] > Outputted mekanism/api/EnergizedItemManager   to reobf\minecraft as mekanism/api/EnergizedItemManager.class
+     [exec] > Outputted ic2/api/network/INetworkItemEventListener to reobf\minecraft as ic2/api/network/INetworkItemEventListener.class
+     [exec] > Outputted thermalexpansion/api/crafting/IFurnaceRecipe to reobf\minecraft as thermalexpansion/api/crafting/IFurnaceRecipe.class
+     [exec] > Outputted universalelectricity/prefab/SlotSpecific to reobf\minecraft as universalelectricity/prefab/SlotSpecific.class
+     [exec] > Outputted altenergy/lib/Textures              to reobf\minecraft as altenergy/lib/Textures.class
+     [exec] > Outputted altenergy/core/misc/ItemAE          to reobf\minecraft as altenergy/core/misc/ItemAE.class
+     [exec] > Outputted universalelectricity/prefab/multiblock/BlockMulti to reobf\minecraft as universalelectricity/prefab/multiblock/BlockMulti.class
+     [exec] > Outputted altenergy/lib/ItemUpdateTypes       to reobf\minecraft as altenergy/lib/ItemUpdateTypes.class
+     [exec] > Outputted thermalexpansion/api/crafting/ITransposerManager to reobf\minecraft as thermalexpansion/api/crafting/ITransposerManager.class
+     [exec] > Outputted altenergy/lib/RenderIds             to reobf\minecraft as altenergy/lib/RenderIds.class
+     [exec] > Outputted ic2/api/energy/tile/IEnergyConductor to reobf\minecraft as ic2/api/energy/tile/IEnergyConductor.class
+     [exec] > Outputted ic2/api/item/ITerraformingBP        to reobf\minecraft as ic2/api/item/ITerraformingBP.class
+     [exec] > Outputted universalelectricity/prefab/RecipeHelper to reobf\minecraft as universalelectricity/prefab/RecipeHelper.class
+     [exec] > Outputted mekanism/api/IEnergizedItem         to reobf\minecraft as mekanism/api/IEnergizedItem.class
+     [exec] > Outputted thermalexpansion/api/crafting/ISmelterRecipe to reobf\minecraft as thermalexpansion/api/crafting/ISmelterRecipe.class
+     [exec] > Outputted altenergy/client/render/item/ItemEnergyBuswayRenderer$1 to reobf\minecraft as altenergy/client/render/item/ItemEnergyBuswayRenderer$1.class
+     [exec] > Outputted ic2/api/energy/event/EnergyTileEvent to reobf\minecraft as ic2/api/energy/event/EnergyTileEvent.class
+     [exec] > Outputted altenergy/lib/Localizations         to reobf\minecraft as altenergy/lib/Localizations.class
+     [exec] > Outputted altenergy/content/forcefielddoor/BlockEmiterFF to reobf\minecraft as altenergy/content/forcefielddoor/BlockEmiterFF.class
+     [exec] > Outputted universalelectricity/core/block/IConnector to reobf\minecraft as universalelectricity/core/block/IConnector.class
+     [exec] > Outputted ic2/api/item/ICustomElectricItem    to reobf\minecraft as ic2/api/item/ICustomElectricItem.class
+     [exec] > Outputted thermalexpansion/api/tileentity/IRedstoneControl to reobf\minecraft as thermalexpansion/api/tileentity/IRedstoneControl.class
+     [exec] > Outputted altenergy/lib/Strings               to reobf\minecraft as altenergy/lib/Strings.class
+     [exec] > Outputted altenergy/AltEnergy                 to reobf\minecraft as altenergy/AltEnergy.class
+     [exec] > Outputted altenergy/items/ItemBase3D          to reobf\minecraft as altenergy/items/ItemBase3D.class
+     [exec] > Outputted altenergy/client/render/item/ItemEnergyCrystalRenderer to reobf\minecraft as altenergy/client/render/item/ItemEnergyCrystalRenderer.class
+     [exec] > Outputted mekanism/api/GasTransferProtocol    to reobf\minecraft as mekanism/api/GasTransferProtocol.class
+     [exec] > Outputted mekanism/api/IStorageTank           to reobf\minecraft as mekanism/api/IStorageTank.class
+     [exec] > Outputted altenergy/recipes/RecipeHandler     to reobf\minecraft as altenergy/recipes/RecipeHandler.class
+     [exec] > Outputted altenergy/items/ItemStrangeCrystal  to reobf\minecraft as altenergy/items/ItemStrangeCrystal.class
+     [exec] > Outputted mekanism/api/GasTransmission        to reobf\minecraft as mekanism/api/GasTransmission.class
+     [exec] > Outputted mekanism/api/InfusionInput          to reobf\minecraft as mekanism/api/InfusionInput.class
+     [exec] > Outputted thermalexpansion/api/crafting/ISawmillManager to reobf\minecraft as thermalexpansion/api/crafting/ISawmillManager.class
+     [exec] > Outputted universalelectricity/core/path/PathfinderChecker$1 to reobf\minecraft as universalelectricity/core/path/PathfinderChecker$1.class
+     [exec] > Outputted universalelectricity/prefab/flag/FlagRegistry to reobf\minecraft as universalelectricity/prefab/flag/FlagRegistry.class
+     [exec] > Outputted thermalexpansion/api/crafting/IFurnaceManager to reobf\minecraft as thermalexpansion/api/crafting/IFurnaceManager.class
+     [exec] > Outputted ic2/api/item/ItemWrapper            to reobf\minecraft as ic2/api/item/ItemWrapper.class
+     [exec] > Outputted altenergy/core/util/LocalizationUtil to reobf\minecraft as altenergy/core/util/LocalizationUtil.class
+     [exec] > Outputted altenergy/lib/ItemIds               to reobf\minecraft as altenergy/lib/ItemIds.class
+     [exec] > Outputted mekanism/api/IGasStorage            to reobf\minecraft as mekanism/api/IGasStorage.class
+     [exec] > Outputted universalelectricity/core/path/PathfinderAStar to reobf\minecraft as universalelectricity/core/path/PathfinderAStar.class
+     [exec] > Outputted altenergy/lib/Models                to reobf\minecraft as altenergy/lib/Models.class
+     [exec] > Outputted universalelectricity/prefab/flag/Flag to reobf\minecraft as universalelectricity/prefab/flag/Flag.class
+     [exec] > Outputted universalelectricity/core/electricity/IConductorRegistry to reobf\minecraft as universalelectricity/core/electricity/IConductorRegistry.class
+     [exec] > Outputted ic2/api/reactor/IC2Reactor          to reobf\minecraft as ic2/api/reactor/IC2Reactor.class
+     [exec] > Outputted thermalexpansion/api/tileentity/ITesseract to reobf\minecraft as thermalexpansion/api/tileentity/ITesseract.class
+     [exec] > Outputted ic2/api/reactor/IReactorComponent   to reobf\minecraft as ic2/api/reactor/IReactorComponent.class
+     [exec] > Outputted universalelectricity/core/path/PathfinderChecker to reobf\minecraft as universalelectricity/core/path/PathfinderChecker.class
+     [exec] > Outputted universalelectricity/prefab/network/PacketManager$PacketType to reobf\minecraft as universalelectricity/prefab/network/PacketManager$PacketType.class
+     [exec] > Outputted altenergy/blocks/BlockGraniteBrick  to reobf\minecraft as altenergy/blocks/BlockGraniteBrick.class
+     [exec] > Outputted thermalexpansion/api/tileentity/IReconfigurableFacing to reobf\minecraft as thermalexpansion/api/tileentity/IReconfigurableFacing.class
+     [exec] > Outputted universalelectricity/core/electricity/ElectricityDisplay$ElectricUnit to reobf\minecraft as universalelectricity/core/electricity/ElectricityDisplay$ElectricUnit.class
+     [exec] > Outputted altenergy/content/conductors/BlockUtilBundle to reobf\minecraft as altenergy/content/conductors/BlockUtilBundle.class
+     [exec] > Outputted altenergy/worldGen/WorldGenManager  to reobf\minecraft as altenergy/worldGen/WorldGenManager.class
+     [exec] > Outputted ic2/api/item/IBoxable               to reobf\minecraft as ic2/api/item/IBoxable.class
+     [exec] > Outputted mekanism/api/Object3D               to reobf\minecraft as mekanism/api/Object3D.class
+     [exec] > Outputted altenergy/core/util/AltEnergyUtils$1 to reobf\minecraft as altenergy/core/util/AltEnergyUtils$1.class
+     [exec] > Outputted universalelectricity/prefab/flag/ModFlag to reobf\minecraft as universalelectricity/prefab/flag/ModFlag.class
+     [exec] > Outputted universalelectricity/prefab/implement/IDisableable to reobf\minecraft as universalelectricity/prefab/implement/IDisableable.class
+     [exec] - Done in 29.46 seconds
+     [exec] !! Can not find server md5s !!
+     [exec] Press any key to continue . . . 
+      [jar] Building jar: C:\Users\David N\Desktop\MC moding\Mod dev\Source\AltEnergy\Releases\1.5.2\0.0.1\AltEnergy-universal-mc1.5.2-vs0.0.1.23.jar
+
+clean:
+   [delete] Deleting: C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft\mcmod.info
+   [delete] Deleting directory C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft\ic2
+   [delete] Deleting directory C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft\thermalexpansion
+   [delete] Deleting directory C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft\universalelectricity
+   [delete] Deleting directory C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft\Mekanism
+   [delete] Deleting directory C:\Users\David N\Desktop\MC moding\Mod dev\mcp\src\minecraft\altenergy
+   [delete] Deleting directory C:\Users\David N\Desktop\MC moding\Mod dev\mcp\reobf\minecraft
+
+BUILD SUCCESSFUL
+Total time: 59 seconds

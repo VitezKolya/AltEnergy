@@ -38,12 +38,13 @@ A multi-block structure that drills down to bedrock to where the vast and inifin
 of oil lies. Takes 25KW at 1040v
 
 Energy Busway
-Conductive pathway for 1TW at 1,000,000v.
-This conductor can only contect to a junction box or a power regulator. It can not connect 
-to it self or to any other cable.
+Conductive pathway for 50TW at 10,000,000v.
+This conductor can only contect to a junction box or a power regulator. It can only connect to 
+it self not any other cable the only other TileEntities it can connect it is machines that alow
+it and the junction box.
 
 Energy Cable
-Cunductive pathway for 50KW at 2000v. This cable can connect to anything excepct Busway.
+Cunductive pathway for 250KW at 1000v. This cable can connect to anything excepct Busway.
 
 Data Cable
 Connects controllers to the computer core and can connect to CC computers.
@@ -83,7 +84,7 @@ Quortz dust
 Diamond Dust
 tiny Diamond Dust
 
-Crystal Prossessor
+Crystal Processor
 Crystal Data Storage
 Crystal Circuit Board
 Pattern Crystal
@@ -188,7 +189,13 @@ Lighting wall - Requires floor
 Lighting Ceiling  - Requires floor
 Lighting Floor - Requires floor
 
+New Dimision:
+	GlalaticCraft
+	Dimision
 
+	Base generation stone is granite
+	New Villigers/Villige only
+	New Monsters only
 
 System:
 
@@ -206,7 +213,23 @@ meta data
 8 - Granite Collumm Cap
 9 - Granite Inscriptibed
 
+EnergyCrystal
+	Gigantic	- RainBow -- May not be made
+	Huge	- Light Blue
+	Large	- Puple
+	Medium	- Blue
+	Small	- Yellow
+	Tiny	- Green
 
 Granite Stairs
 Granite halfblock
 Granite doublehalfblock
+
+Busway Connections:
+
+0, Bottom - BuswaySingleVertEndA, BuswayConnectionF, BuswayStrightConnectionC
+1, Top - BuswaySingleVertEndB, BuswayConnectionE, BuswayStrightConnectionC
+2, Back - BuswaySingleHorzEndC, BuswayConnectionA, BuswayStrightConnectionA, BuswayJunctionConnectionEndA
+3, Front - BuswaySingleHorzEndA, BuswayConnectionB, BuswayStrightConnectionA, BuswayJunctionConnectionEndB
+4, Left - BuswaySingleHorzEndB, BuswayConnectionC, BuswayStrightConnectionB, BuswayJunctionConnectionEndC
+5, Right - BuswaySingleHorzEndD, BuswayConnectionD,BuswayStrightConnectionB, BuswayJunctionConnectionEndD

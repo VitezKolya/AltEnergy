@@ -36,9 +36,9 @@ public class BlockStrangeCrystalOre extends Block {
 	 */
 	// @Override
 	@Override
-	public int idDropped(int par1, Random par2Random, int par3) {
+	public int idDropped(int meta, Random par2Random, int fortune) {
 
-		return ItemIds.STRANGE_CRYSTAL;
+		return ItemIds.GEMS;
 	}
 
 	/**
@@ -69,17 +69,17 @@ public class BlockStrangeCrystalOre extends Block {
 		super.dropBlockAsItemWithChance(par1World, par2, par3, par4, par5, par6, par7);
 
 		if (this.idDropped(par5, par1World.rand, par7) != blockID
-				|| this.idDropped(par5, par1World.rand, par7) != ItemIds.STRANGE_CRYSTAL) {
+				|| this.idDropped(par5, par1World.rand, par7) != ItemIds.GEMS) {
 
 			int var8 = 1 + par1World.rand.nextInt(5);
 
-			this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.gemStrangeCrystal, 1));
+			this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.gems, 1,0));
 
 			if (par1World.rand.nextInt(5) != 4) {
 
 				for (int i = 0; i < this.quantityDropped(par1World.rand); i++) {
 
-					this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.dustSrangeCrystal, 1));
+					this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.dusts, 1,0));
 				}
 			}
 

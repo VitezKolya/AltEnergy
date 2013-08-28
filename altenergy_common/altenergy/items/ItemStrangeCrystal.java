@@ -2,6 +2,7 @@
 package altenergy.items;
 
 import altenergy.AltEnergy;
+import altenergy.core.misc.ItemAE;
 
 public class ItemStrangeCrystal extends ItemAE {
 

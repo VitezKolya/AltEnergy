@@ -5,7 +5,11 @@
 	
 	<target name="clean">
 		<delete file="${build.dir.development}\mcp\src\minecraft\mcmod.info" />
-		<delete dir="${build.dir.development}\mcp\src\minecraft\altenergy\" />
+		<delete dir="${build.dir.development}\mcp\src\minecraft\ic2" />
+		<delete dir="${build.dir.development}\mcp\src\minecraft\thermalexpansion" />
+		<delete dir="${build.dir.development}\mcp\src\minecraft\universalelectricity" />
+		<delete dir="${build.dir.development}\mcp\src\minecraft\Mekanism" />
+		<delete dir="${build.dir.development}\mcp\src\minecraft\altenergy" />
 		<delete dir="${build.dir.development}\mcp\reobf\minecraft" />
 	</target>
 	
@@ -18,6 +22,10 @@
 	<target name="prep">
 		<copy todir="${build.dir.development}\mcp\src\minecraft">
 			<fileset dir="${build.dir.development}\source\AltEnergy\altenergy_common\" />
+			<fileset dir="${build.dir.development}\source\ic2\" />
+			<fileset dir="${build.dir.development}\source\thermalexpansion\" />
+			<fileset dir="${build.dir.development}\source\Mekanism\" />
+			<fileset dir="${build.dir.development}\source\universalelectricity\" />
 		</copy>
 	</target>
 	

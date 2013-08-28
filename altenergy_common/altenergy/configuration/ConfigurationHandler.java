@@ -33,6 +33,14 @@ public class ConfigurationHandler {
 					ConfigurationSettings.GRANITE_CHEAT_ENABLE_CONFIGNAME,
 					ConfigurationSettings.GRANITE_CHEAT_ENABLE_DEFAULT).getBoolean(
 					ConfigurationSettings.GRANITE_CHEAT_ENABLE_DEFAULT);
+			ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH = configuration.get(Configuration.CATEGORY_GENERAL,
+					ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH_CONFIGNAME,
+					ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH_DEFAULT).getInt(
+					ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH_DEFAULT);
+			ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT = configuration.get(Configuration.CATEGORY_GENERAL,
+					ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT_CONFIGNAME,
+					ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT_DEFAULT).getInt(
+					ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT_DEFAULT);
 
 			/* Generation configs */
 			ConfigurationSettings.ORE_GENERATION_ENABLE = configuration.get(CATEGORY_GENERATION,
@@ -90,18 +98,17 @@ public class ConfigurationHandler {
 			/* Audio configs */
 
 			/* Item configs */
-			ItemIds.STRANGE_CRYSTAL = configuration.getItem(Strings.GEM_STRANGE_CRYSTAL_NAME,
-					ItemIds.STRANGE_CRYSTAL_DEFAULT).getInt(ItemIds.STRANGE_CRYSTAL_DEFAULT);
-			ItemIds.STRANGE_CRYSTAL_DUST = configuration.getItem(Strings.ITEM_STRANGE_CRYSTAL_DUST_NAME,
-					ItemIds.STRANGE_CRYSTAL_DUST_DEFAULT).getInt(ItemIds.STRANGE_CRYSTAL_DUST_DEFAULT);
-			ItemIds.QUARTZ_DUST = configuration.getItem(Strings.ITEM_QUARTZ_DUST_NAME, ItemIds.QUARTZ_DUST_DEFAULT)
-					.getInt(ItemIds.QUARTZ_DUST_DEFAULT);
-			ItemIds.TINY_QUARTZ_DUST = configuration.getItem(Strings.ITEM_TINY_QUARTZ_DUST_NAME,
-					ItemIds.TINY_QUARTZ_DUST_DEFAULT).getInt(ItemIds.TINY_QUARTZ_DUST_DEFAULT);
-			ItemIds.DIAMOND_DUST = configuration.getItem(Strings.ITEM_DIAMOND_DUST_NAME, ItemIds.DIAMOND_DUST_DEFAULT)
-					.getInt(ItemIds.DIAMOND_DUST_DEFAULT);
-			ItemIds.TINY_DIAMOND_DUST = configuration.getItem(Strings.ITEM_TINY_DIAMOND_DUST_NAME,
-					ItemIds.TINY_DIAMOND_DUST_DEFAULT).getInt(ItemIds.TINY_DIAMOND_DUST_DEFAULT);
+			
+			ItemIds.ITEMS = configuration.getItem("items", ItemIds.ITEMS_DEFAULT).getInt(ItemIds.ITEMS_DEFAULT);
+			ItemIds.ITEMS_3D = configuration.getItem("items3d", ItemIds.ITEMS_3D_DEFAULT).getInt(ItemIds.ITEMS_3D_DEFAULT);
+			ItemIds.GEMS = configuration.getItem("gemItems", ItemIds.GEMS_DEFAULT).getInt(ItemIds.GEMS_DEFAULT);
+			ItemIds.DUSTS = configuration.getItem("dustItems", ItemIds.DUSTS_DEFAULT).getInt(ItemIds.DUSTS_DEFAULT);
+			ItemIds.ENERGY_CRYSTAL_TINY = configuration.getItem(Strings.ENERGY_CRYSTAL_TINY, ItemIds.ENERGY_CRYSTAL_TINY_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_TINY_DEFAULT);
+			ItemIds.ENERGY_CRYSTAL_SMALL = configuration.getItem(Strings.ENERGY_CRYSTAL_SMALL, ItemIds.ENERGY_CRYSTAL_SMALL_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_SMALL_DEFAULT);
+			ItemIds.ENERGY_CRYSTAL_MEDIUM = configuration.getItem(Strings.ENERGY_CRYSTAL_MEDIUM, ItemIds.ENERGY_CRYSTAL_MEDIUM_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_MEDIUM_DEFAULT);
+			ItemIds.ENERGY_CRYSTAL_LARGE = configuration.getItem(Strings.ENERGY_CRYSTAL_LARGE, ItemIds.ENERGY_CRYSTAL_LARGE_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_LARGE_DEFAULT);
+			ItemIds.ENERGY_CRYSTAL_HUGE = configuration.getItem(Strings.ENERGY_CRYSTAL_HUGE, ItemIds.ENERGY_CRYSTAL_HUGE_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_HUGE_DEFAULT);
+			ItemIds.ENERGY_CRYSTAL_GIGANTIC = configuration.getItem(Strings.ENERGY_CRYSTAL_GIGANTIC, ItemIds.ENERGY_CRYSTAL_GIGANTIC_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_GIGANTIC_DEFAULT);
 
 			/* Block configs */
 			BlockIds.GRANITE = configuration.getBlock(Strings.BLOCK_GRANITE_NAME, BlockIds.GRANITE_DEFAULT).getInt(
@@ -119,19 +126,17 @@ public class ConfigurationHandler {
 			BlockIds.CONTROLLER_FF = configuration
 					.getBlock(Strings.BLOCK_CONTROLLER_FF, BlockIds.CONTROLLER_FF_DEFAULT).getInt(
 							BlockIds.CONTROLLER_FF_DEFAULT);
+			BlockIds.CONTROLLER_PC = configuration
+					.getBlock(Strings.BLOCK_CONTROLLER_PC, BlockIds.CONTROLLER_PC_DEFAULT).getInt(
+							BlockIds.CONTROLLER_PC_DEFAULT);
 			BlockIds.EMITER_FF = configuration.getBlock(Strings.BLOCK_EMITER_FF, BlockIds.EMITER_FF_DEFAULT).getInt(
 					BlockIds.EMITER_FF_DEFAULT);
+			BlockIds.ENERGY_BUSWAY = configuration.getBlock(Strings.BLOCK_ENERGY_BUSWAY,
+					BlockIds.ENERGY_BUSWAY_DEFAULT).getInt(BlockIds.ENERGY_BUSWAY_DEFAULT);
 			BlockIds.POWER_REGULATOR = configuration.getBlock(Strings.BLOCK_POWER_REGULATOR,
 					BlockIds.POWER_REGULATOR_DEFAULT).getInt(BlockIds.POWER_REGULATOR_DEFAULT);
-
-			ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH = configuration.get(CATEGORY_BLOCK,
-					ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH_CONFIGNAME,
-					ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH_DEFAULT).getInt(
-					ConfigurationSettings.FORCEFIELD_DOOR_MAXWIDTH_DEFAULT);
-			ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT = configuration.get(CATEGORY_BLOCK,
-					ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT_CONFIGNAME,
-					ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT_DEFAULT).getInt(
-					ConfigurationSettings.FORCEFIELD_DOOR_MAXHEIGHT_DEFAULT);
+			BlockIds.MINI_POWERCORE = configuration.getBlock(Strings.BLOCK_MINI_POWER_CORE,
+					BlockIds.MINI_POWERCORE_DEFAULT).getInt(BlockIds.MINI_POWERCORE_DEFAULT);
 
 		} catch (Exception e) {
 			FMLLog.log(Level.SEVERE, e, Reference.MOD_NAME + " has had a problem loading its configuration");

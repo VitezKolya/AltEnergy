@@ -17,13 +17,15 @@ public class ItemMetaBlock extends ItemBlock {
 	@Override
 	public String getUnlocalizedName(ItemStack itemstack) {
 
-		for (int i = 0; i < Strings.BLOCK_META_NAMES.length; i++) {
+		
+		return this.getUnlocalizedName() + Strings.BLOCK_GRANITE_BRICKS_SUBNAMES[itemstack.getItemDamage()];
+		/*for (int i = 0; i < Strings.BLOCK_META_NAMES.length; i++) {
 			if (i == this.getDamage(itemstack)) {
 				return this.getUnlocalizedName() + Strings.BLOCK_META_NAMES[i];
 			}
 		}
 
-		return "";
+		return "";*/
 	}
 
 	public int getMeta(int meta) {

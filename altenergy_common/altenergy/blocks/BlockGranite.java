@@ -10,6 +10,7 @@ import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 import altenergy.AltEnergy;
 import altenergy.configuration.ConfigurationSettings;
+import altenergy.core.misc.BlockAE;
 import altenergy.items.ModItems;
 import altenergy.lib.ItemIds;
 import altenergy.lib.Reference;
@@ -56,10 +57,9 @@ public class BlockGranite extends BlockAE {
 	public void dropBlockAsItemWithChance(World par1World, int par2, int par3, int par4, int par5, float par6, int par7) {
 
 		// super.dropBlockAsItemWithChance(par1World, par2, par3, par4, par5,
-		// par6, par7);
-
+		// par6, par7);type name = new type(arguments);
 		if (this.idDropped(par5, par1World.rand, par7) != blockID
-				|| this.idDropped(par5, par1World.rand, par7) != ItemIds.STRANGE_CRYSTAL_DUST) {
+				|| this.idDropped(par5, par1World.rand, par7) != ItemIds.DUSTS) {
 
 			if (ConfigurationSettings.GRANITE_CHEAT_ENABLE) {
 				// this.dropBlockAsItem_do(par1World, par2, par3, par4, new
@@ -73,7 +73,7 @@ public class BlockGranite extends BlockAE {
 
 				for (int i = 0; i < this.quantityDropped(par1World.rand); i++) {
 
-					this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.dustSrangeCrystal, 1));
+					this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.dusts, 1,0));
 				}
 			}
 		}
