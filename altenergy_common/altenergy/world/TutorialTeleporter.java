@@ -6,7 +6,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
-import altenergy.lib.BlockIds;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.LongHashMap;
@@ -14,6 +13,7 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
+import altenergy.lib.BlockIds;
 
 public class TutorialTeleporter extends Teleporter {
 
@@ -368,8 +368,7 @@ public class TutorialTeleporter extends Teleporter {
 					flag = i3 == 0 || i3 == 3 || l2 == -1 || l2 == 3;
 
 					/** change these blocks **/
-					worldServerInstance.setBlock(k3, j3, i4, flag ? BlockIds.GRANITE
-							: BlockIds.PORTAL, 0, 2);
+					worldServerInstance.setBlock(k3, j3, i4, flag ? BlockIds.GRANITE : BlockIds.PORTAL, 0, 2);
 				}
 			}
 			for (i3 = 0; i3 < 4; ++i3) {

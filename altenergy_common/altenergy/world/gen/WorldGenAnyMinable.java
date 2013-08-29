@@ -8,6 +8,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenAnyMinable extends WorldGenerator {
+
 	/** The block ID of the ore to be placed using this generator. */
 	private int minableBlockId;
 

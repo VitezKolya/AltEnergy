@@ -26,10 +26,10 @@ public class BlockGranite extends BlockAE {
 
 		super(id, Material.rock);
 
-		this.setCreativeTab(AltEnergy.tabsAE);
-		this.setUnlocalizedName(Strings.BLOCK_GRANITE_NAME);
-		this.setHardness(20.0F);
-		this.setResistance(4500.0F);
+		setCreativeTab(AltEnergy.tabsAE);
+		setUnlocalizedName(Strings.BLOCK_GRANITE_NAME);
+		setHardness(20.0F);
+		setResistance(4500.0F);
 	}
 
 	/**
@@ -58,8 +58,7 @@ public class BlockGranite extends BlockAE {
 
 		// super.dropBlockAsItemWithChance(par1World, par2, par3, par4, par5,
 		// par6, par7);type name = new type(arguments);
-		if (this.idDropped(par5, par1World.rand, par7) != blockID
-				|| this.idDropped(par5, par1World.rand, par7) != ItemIds.DUSTS) {
+		if (idDropped(par5, par1World.rand, par7) != blockID || idDropped(par5, par1World.rand, par7) != ItemIds.DUSTS) {
 
 			if (ConfigurationSettings.GRANITE_CHEAT_ENABLE) {
 				// this.dropBlockAsItem_do(par1World, par2, par3, par4, new
@@ -73,7 +72,7 @@ public class BlockGranite extends BlockAE {
 
 				for (int i = 0; i < this.quantityDropped(par1World.rand); i++) {
 
-					this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.dusts, 1,0));
+					dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.dusts, 1, 0));
 				}
 			}
 		}

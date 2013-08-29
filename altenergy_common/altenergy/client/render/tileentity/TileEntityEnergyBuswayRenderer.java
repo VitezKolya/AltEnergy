@@ -1,8 +1,6 @@
 
 package altenergy.client.render.tileentity;
 
-import java.util.Random;
-
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 
@@ -33,37 +31,38 @@ public class TileEntityEnergyBuswayRenderer extends TileEntitySpecialRenderer {
 		// Bind Texture
 		// bindTextureByName(Textures.MODEL_BUSWAY);
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(Textures.MODEL_ENERGY_BUSWAY);
-		
+
 		model.setConnections(tileEntity.visuallyConnected);
-		
+
 		model.renderSides(tileEntity.getNumConnections());
 
-		
-		/*if (tileEntity.visuallyConnected[0]) {
-			model.renderPart("BuswayConnectionF");
-		}
-
-		if (tileEntity.visuallyConnected[1]) {
-			model.renderPart("BuswayConnectionE");
-		}
-
-		if (connectedSides[2]) {
-			model.renderPart("BuswayConnectionA");
-		}
-
-		if (connectedSides[3]) {
-			model.renderPart("BuswayConnectionB");
-		}
-
-		if (connectedSides[4]) {
-			model.renderPart("BuswayConnectionC");
-		}
-
-		if (connectedSides[5]) {
-			model.renderPart("BuswayConnectionD");
-		}
-
-		model.renderPart("BuswayNone");*/
+		/*
+		 * if (tileEntity.visuallyConnected[0]) {
+		 * model.renderPart("BuswayConnectionF");
+		 * }
+		 * 
+		 * if (tileEntity.visuallyConnected[1]) {
+		 * model.renderPart("BuswayConnectionE");
+		 * }
+		 * 
+		 * if (connectedSides[2]) {
+		 * model.renderPart("BuswayConnectionA");
+		 * }
+		 * 
+		 * if (connectedSides[3]) {
+		 * model.renderPart("BuswayConnectionB");
+		 * }
+		 * 
+		 * if (connectedSides[4]) {
+		 * model.renderPart("BuswayConnectionC");
+		 * }
+		 * 
+		 * if (connectedSides[5]) {
+		 * model.renderPart("BuswayConnectionD");
+		 * }
+		 * 
+		 * model.renderPart("BuswayNone");
+		 */
 
 		GL11.glEnable(GL11.GL_LIGHTING);
 		GL11.glPopMatrix();

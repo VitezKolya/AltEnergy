@@ -53,16 +53,17 @@ public class TileMiniPowerCore extends TilePowerCoreBase implements IInventory, 
 	public final Set<EntityPlayer> playerUsing = new HashSet<EntityPlayer>();
 
 	public TileMiniPowerCore() {
-		
+
 		// Overload when generated watts are above 50kw
+		System.out.println("Loaded MiniPowerCore");
 		MAX_GENERATE_WATTS = 100000;
 		MIN_GENERATE_WATTS = 500;
 		MAX_OVERLOAD = 1000;
 		MAX_OUTPUT_SETTING = 2.0F;
 		VOLTAGE = 960;
-		
-		if(!isLinked) {
-		state = PowerCoreState.Idle;
+
+		if (!isLinked) {
+			state = PowerCoreState.Idle;
 		} else {
 			findController();
 		}
@@ -81,9 +82,38 @@ public class TileMiniPowerCore extends TilePowerCoreBase implements IInventory, 
 		return VOLTAGE;
 	}
 
-	public void setOutputSetting(float setting) {
+	public int getItemId() {
 
-		
+		return containingItems[0].itemID;
+	}
+
+	@Override
+	public void setOutputLevel(float level) {
+
+		if (connectedElectricUnit != null) {
+			if (state != PowerCoreState.Vent) {
+				if (level <= MAX_OUTPUT_SETTING) {
+					if (level >= 0 && level != 2) {
+
+						state = PowerCoreState.Generate;
+					} else if (level == 0.0F) {
+
+						state = PowerCoreState.Idle;
+					} else if (level > 1.0F) {
+
+						state = PowerCoreState.Overload;
+					}
+
+					outputLevel = level;
+				} else if (level < 0.0F) {
+
+					level = 0.0F;
+				} else {
+
+					outputLevel = MAX_OUTPUT_SETTING;
+				}
+			}
+		}
 	}
 
 	@Override
@@ -92,76 +122,78 @@ public class TileMiniPowerCore extends TilePowerCoreBase implements IInventory, 
 		super.updateEntity();
 
 		if (!worldObj.isRemote) {
-			if(isLinked) {
+			if (isLinked) {
 				prevGenerateWatts = generateWatts;
-	
+
 				ForgeDirection outputDirection = ForgeDirection.getOrientation(getBlockMetadata());
-				TileEntity outputTile = VectorHelper.getConnectorFromSide(worldObj, new Vector3(xCoord, yCoord, zCoord),
+				TileEntity outputTile = VectorHelper.getConnectorFromSide(worldObj,
+						new Vector3(xCoord, yCoord, zCoord), outputDirection);
+
+				IElectricityNetwork network = ElectricityNetworkHelper.getNetworkFromTileEntity(outputTile,
 						outputDirection);
-	
-				IElectricityNetwork network = ElectricityNetworkHelper
-						.getNetworkFromTileEntity(outputTile, outputDirection);
-	
+
 				if (network != null) {
 					if (network.getRequest().getWatts() > 0) {
-						connectedElectricUnit = (IConductor) outputTile;
+						if (connectedElectricUnit.getCurrentCapcity() >= MAX_GENERATE_WATTS / VOLTAGE) {
+							connectedElectricUnit = (IConductor) outputTile;
+						}
 					} else {
 						connectedElectricUnit = null;
 					}
 				} else {
 					connectedElectricUnit = null;
 				}
-	
+
 				if (!isDisabled()) {
-	
+
 					if (connectedElectricUnit != null) {
-	
+
 						if (state == PowerCoreState.Generate) {
 							// Generate power normally
 							// if crystal is damaged then reduce the output
-	
-							// max crystal damage should be 1000 and dividing that
+
+							// max crystal damage should be 1000 and dividing
+							// that
 							// by 1000 should be 1. So that
-							// when crystal gets damaged by overloading it become
+							// when crystal gets damaged by overloading it
+							// become
 							// 0.9 something.
-							int crystalDamage = containingItems[0].getItemDamage() / 1000;
-							// This is normal generate state so max watts should be
+							int crystalDamage = containingItems[0].getItemDamage() / containingItems[0].getMaxDamage();
+							// This is normal generate state so max watts should
+							// be
 							// halved.
 							int currentMaxWatts = MAX_GENERATE_WATTS / 2 * crystalDamage;
-	
+
 							generateWatts = currentMaxWatts * outputLevel;
-						}
-	
-						if (state == PowerCoreState.Overload) {
+						} else if (state == PowerCoreState.Overload) {
 							// Generate more power but damages the crystal
 							// Builds up heat
-	
+
 							if (lastTicks - ticks <= Reference.SECOND_IN_TICKS && overloadHeat >= MAX_OVERLOAD * 0.50) {
 								containingItems[0].setItemDamage(containingItems[0].getItemDamage() - 1
 										* (MAX_OVERLOAD / 100));
 							}
-	
-							int crystalDamage = containingItems[0].getItemDamage() / 1000;
+
+							int crystalDamage = containingItems[0].getItemDamage() / containingItems[0].getMaxDamage();
 							int currentMaxWatts = MAX_GENERATE_WATTS * crystalDamage;
 							generateWatts = currentMaxWatts * outputLevel;
 							overloadHeat++;
-						}
-	
-						if (state == PowerCoreState.Vent) {
+						} else if (state == PowerCoreState.Vent) {
 							// Vents overloadHeat
 							// prevents generator from exploding
-	
+
 							if (lastTicks - ticks <= Reference.SECOND_IN_TICKS) {
 								if (overloadHeat > 0) {
 									overloadHeat--;
+									generateWatts = 0;
 								} else {
+									generateWatts = 0;
 									state = PowerCoreState.Idle;
 								}
 							}
-	
 						}
 					}
-	
+
 					if (connectedElectricUnit != null) {
 						if (generateWatts > MIN_GENERATE_WATTS) {
 							connectedElectricUnit.getNetwork().startProducing(this,
@@ -171,13 +203,13 @@ public class TileMiniPowerCore extends TilePowerCoreBase implements IInventory, 
 						}
 					}
 				}
-	
+
 				if (ticks % 3 == 0) {
 					for (EntityPlayer player : playerUsing) {
 						PacketDispatcher.sendPacketToPlayer(getDescriptionPacket(), (Player) player);
 					}
 				}
-	
+
 				if (prevGenerateWatts <= 0 && generateWatts > 0 || prevGenerateWatts > 0 && generateWatts <= 0) {
 					PacketManager.sendPacketToClients(getDescriptionPacket(), worldObj);
 				}
@@ -202,6 +234,7 @@ public class TileMiniPowerCore extends TilePowerCoreBase implements IInventory, 
 			if (worldObj.isRemote) {
 				outputLevel = dataStream.readFloat();
 				generateWatts = dataStream.readDouble();
+				outputLevel = dataStream.readFloat();
 				overloadHeat = dataStream.readInt();
 				disabledTicks = dataStream.readInt();
 			}
@@ -390,10 +423,12 @@ public class TileMiniPowerCore extends TilePowerCoreBase implements IInventory, 
 
 	public int getOverloadheat() {
 
-		return this.overloadHeat;
+		return overloadHeat;
 	}
 
+	@Override
 	public PowerCoreState getStatus() {
-		return this.state;
+
+		return state;
 	}
 }

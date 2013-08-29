@@ -1,3 +1,4 @@
+
 package altenergy.items;
 
 import java.util.List;
@@ -9,30 +10,36 @@ import altenergy.AltEnergy;
 import altenergy.core.misc.ItemAE;
 import altenergy.lib.Strings;
 
+public class ItemBase3D extends ItemAE {
 
-public class ItemBase3D extends ItemAE{
-	
 	public ItemBase3D(int id) {
 
 		super(id);
 		setHasSubtypes(true);
 		setCreativeTab(AltEnergy.tabsAE);
-		this.setMaxStackSize(16);
-		
-		/*if(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".")) == Strings.ITEMS_3D[0]) {
-			this.setMaxStackSize(16);
-		} else if(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".")) == Strings.ITEMS_3D[1]) {
-			this.setMaxStackSize(1);
-		} else if(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".")) == Strings.ITEMS_3D[2]) {
-			this.setMaxStackSize(64);
-		}*/
+		setMaxStackSize(16);
+
+		/*
+		 * if(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf
+		 * (".")) == Strings.ITEMS_3D[0]) {
+		 * this.setMaxStackSize(16);
+		 * } else
+		 * if(this.getUnlocalizedName().substring(this.getUnlocalizedName(
+		 * ).indexOf(".")) == Strings.ITEMS_3D[1]) {
+		 * this.setMaxStackSize(1);
+		 * } else
+		 * if(this.getUnlocalizedName().substring(this.getUnlocalizedName(
+		 * ).indexOf(".")) == Strings.ITEMS_3D[2]) {
+		 * this.setMaxStackSize(64);
+		 * }
+		 */
 	}
 
 	@Override
 	public void registerIcons(IconRegister register) {
-		
+
 	}
-	
+
 	@Override
 	public void getSubItems(int id, CreativeTabs tabs, List itemList) {
 
@@ -40,7 +47,7 @@ public class ItemBase3D extends ItemAE{
 			itemList.add(new ItemStack(this, 1, counter));
 		}
 	}
-	
+
 	@Override
 	public String getUnlocalizedName(ItemStack item) {
 

@@ -21,7 +21,7 @@ import cpw.mods.fml.common.Loader;
 public class AEHooks {
 
 	private Class BasicComponents;
-	
+
 	public boolean IC2Loaded = false;
 	public boolean BasicComponentsLoaded = false;
 	public boolean BuildCraftLoaded = false;
@@ -95,7 +95,7 @@ public class AEHooks {
 						}
 					} else if (AltEnergyUtils.getName(recipe.getInput()).startsWith("ingot")) {
 						if (!Recipe.GRINDER.containsRecipe(recipe.getInput())) {
-							
+
 							RecipeHandler.addGrinderRecipe(recipe.getInput(), recipe.getPrimaryOutput());
 						}
 					}
@@ -105,22 +105,27 @@ public class AEHooks {
 			System.out.println("[" + Reference.MOD_ID + "] Hooked into ThermalExpansion successfully.");
 		}
 	}
-	
+
 	public ItemStack getBasicComponentsItem(String name) {
+
 		try {
-			if(BasicComponents == null) BasicComponents = Class.forName("basiccomponents.common.BasicComponents");
-			if(BasicComponents == null) BasicComponents = Class.forName("net.minecraft.src.basiccomponents.common.BasicComponents");
-			
+			if (BasicComponents == null) {
+				BasicComponents = Class.forName("basiccomponents.common.BasicComponents");
+			}
+			if (BasicComponents == null) {
+				BasicComponents = Class.forName("net.minecraft.src.basiccomponents.common.BasicComponents");
+			}
+
 			Object ret = BasicComponents.getField(name).get(null);
-			
-			if(ret instanceof Item) {
+
+			if (ret instanceof Item) {
 				return new ItemStack((Item) ret);
-			} else if(ret instanceof Block) {
+			} else if (ret instanceof Block) {
 				return new ItemStack((Block) ret);
 			} else {
 				throw new Exception("not instanceof ItemStack");
 			}
-		} catch(Exception e) {
+		} catch (Exception e) {
 			System.out.println("[" + Reference.MOD_ID + "] Unable to retrieve Basic Components item " + name + ".");
 			return null;
 		}

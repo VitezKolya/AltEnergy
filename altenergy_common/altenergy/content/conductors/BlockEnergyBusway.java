@@ -32,7 +32,8 @@ public class BlockEnergyBusway extends BlockConductor {
 	@Override
 	public void registerIcons(IconRegister iconRegister) {
 
-		//blockIcon = iconRegister.registerIcon(Reference.MOD_ID + ":" + Strings.BLOCK_ENERGY_BUSWAY);
+		// blockIcon = iconRegister.registerIcon(Reference.MOD_ID + ":" +
+		// Strings.BLOCK_ENERGY_BUSWAY);
 	}
 
 	@Override

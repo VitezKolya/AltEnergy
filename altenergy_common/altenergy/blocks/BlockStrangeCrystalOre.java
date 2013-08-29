@@ -25,10 +25,10 @@ public class BlockStrangeCrystalOre extends Block {
 
 		super(par1, Material.rock);
 
-		this.setCreativeTab(AltEnergy.tabsAE);
-		this.setUnlocalizedName(Strings.BLOCK_STRANGE_CRYSTAL_ORE_NAME);
-		this.setHardness(20.0F);
-		this.setResistance(4500.0F);
+		setCreativeTab(AltEnergy.tabsAE);
+		setUnlocalizedName(Strings.BLOCK_STRANGE_CRYSTAL_ORE_NAME);
+		setHardness(20.0F);
+		setResistance(4500.0F);
 	}
 
 	/**
@@ -68,22 +68,21 @@ public class BlockStrangeCrystalOre extends Block {
 
 		super.dropBlockAsItemWithChance(par1World, par2, par3, par4, par5, par6, par7);
 
-		if (this.idDropped(par5, par1World.rand, par7) != blockID
-				|| this.idDropped(par5, par1World.rand, par7) != ItemIds.GEMS) {
+		if (idDropped(par5, par1World.rand, par7) != blockID || idDropped(par5, par1World.rand, par7) != ItemIds.GEMS) {
 
 			int var8 = 1 + par1World.rand.nextInt(5);
 
-			this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.gems, 1,0));
+			dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.gems, 1, 0));
 
 			if (par1World.rand.nextInt(5) != 4) {
 
 				for (int i = 0; i < this.quantityDropped(par1World.rand); i++) {
 
-					this.dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.dusts, 1,0));
+					dropBlockAsItem_do(par1World, par2, par3, par4, new ItemStack(ModItems.dusts, 1, 0));
 				}
 			}
 
-			this.dropXpOnBlockBreak(par1World, par2, par3, par4, var8);
+			dropXpOnBlockBreak(par1World, par2, par3, par4, var8);
 		}
 	}
 

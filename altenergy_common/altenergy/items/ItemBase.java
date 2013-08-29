@@ -1,3 +1,4 @@
+
 package altenergy.items;
 
 import java.util.List;
@@ -11,9 +12,8 @@ import altenergy.core.misc.ItemAE;
 import altenergy.lib.Reference;
 import altenergy.lib.Strings;
 
+public class ItemBase extends ItemAE {
 
-public class ItemBase extends ItemAE{
-	
 	public Icon[] icons;
 
 	public ItemBase(int id) {
@@ -22,7 +22,6 @@ public class ItemBase extends ItemAE{
 		setHasSubtypes(true);
 		setCreativeTab(AltEnergy.tabsAE);
 	}
-
 
 	@Override
 	public void registerIcons(IconRegister register) {

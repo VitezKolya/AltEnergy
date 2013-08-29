@@ -20,37 +20,37 @@ public final class RecipeHandler {
 
 		recipe.put(input, output);
 	}
-	
+
 	public static void addGrinderRecipe(Object input, Object output) {
 
 		Recipe.GRINDER.put(input, output);
 	}
-	
+
 	public static void addAdvCompressorRecipe(Object input, Object output) {
 
 		Recipe.ADVANCED_COMPRESSOR.put(input, output);
 	}
-	
+
 	public static void addAdvSmeltingFurnaceRecipe(Object input, Object output) {
 
 		Recipe.ADVANCED_SMELTING_FURNACE.put(input, output);
 	}
-	
+
 	public static void addCrystalPurifierRecipe(Object input, Object output) {
 
 		Recipe.PURIFICATION_CHAMBER.put(input, output);
 	}
-	
+
 	public static void addCrystalProcessorRecipe(Object input, Object output) {
 
 		Recipe.CRYSTAL_PROCESSOR.put(input, output);
 	}
-	
+
 	public static void addQauntumEnchichmentChamberRecipe(Object input, Object output) {
 
 		Recipe.QAUNTUM_ENRICHMENT_CHAMBER.put(input, output);
 	}
-	
+
 	public static enum Recipe {
 		GRINDER(new HashMap<ItemStack, ItemStack>()),
 		ADVANCED_COMPRESSOR(new HashMap<ItemStack, ItemStack>()),

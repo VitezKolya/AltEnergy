@@ -32,18 +32,18 @@ public class WorldGenManager implements IWorldGenerator {
 
 	private void generateSurface(World world, Random random, int x, int z) {
 
-		this.addOreSpawn(ModBlocks.granite, Block.stone, world, random, x, z, 16, 16,
+		addOreSpawn(ModBlocks.granite, Block.stone, world, random, x, z, 16, 16,
 				ConfigurationSettings.GRANITE_GENERATION_VEIN_SIZE,
 				ConfigurationSettings.GRANITE_GENERATION_VEIN_PERCHUNK,
 				ConfigurationSettings.GRANITE_GENERATION_MIN_HIGHT, ConfigurationSettings.GRANITE_GENERATION_MAX_HIGHT);
 		if (ConfigurationSettings.STRANGE_CRYSTAL_GENERATE_GRANITE_ONLY_ENABLE) {
-			this.addOreSpawn(ModBlocks.granite, ModBlocks.strangeCrystalOre, world, random, x, z, 16, 16,
+			addOreSpawn(ModBlocks.granite, ModBlocks.strangeCrystalOre, world, random, x, z, 16, 16,
 					ConfigurationSettings.STRANGE_CRYSTAL_GENERATION_VEIN_SIZE,
 					ConfigurationSettings.STRANGE_CRYSTAL_GENERATION_VEIN_PERCHUNK,
 					ConfigurationSettings.STRANGE_CRYSTAL_GENERATION_MIN_HIGHT,
 					ConfigurationSettings.STRANGE_CRYSTAL_GENERATION_MAX_HIGHT);
 		} else {
-			this.addOreSpawn(Block.stone, ModBlocks.strangeCrystalOre, world, random, x, z, 16, 16,
+			addOreSpawn(Block.stone, ModBlocks.strangeCrystalOre, world, random, x, z, 16, 16,
 					ConfigurationSettings.STRANGE_CRYSTAL_GENERATION_VEIN_SIZE,
 					ConfigurationSettings.STRANGE_CRYSTAL_GENERATION_VEIN_PERCHUNK,
 					ConfigurationSettings.STRANGE_CRYSTAL_GENERATION_MIN_HIGHT,

@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 import universalelectricity.prefab.block.BlockAdvanced;
 import altenergy.AltEnergy;
 import altenergy.core.misc.TilePowerCoreBase;
-//import altenergy.content.controllers.TileControllerPC;
+// import altenergy.content.controllers.TileControllerPC;
 import altenergy.lib.GuiIds;
 import altenergy.lib.RenderIds;
 import altenergy.lib.Strings;
@@ -90,7 +90,7 @@ public class BlockControllerPC extends BlockAdvanced {
 		if (player.isSneaking()) {
 			return false;
 		} else {
-			if (!world.isRemote) {
+			if (world.isRemote) {
 				TileControllerPC tileEntity = (TileControllerPC) world.getBlockTileEntity(x, y, z);
 				tileEntity.findControlled();
 				if (tileEntity != null) {

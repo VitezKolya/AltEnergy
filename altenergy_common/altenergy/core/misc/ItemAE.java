@@ -14,7 +14,7 @@ public abstract class ItemAE extends Item {
 
 		super(id - Reference.SHIFTED_ID_RANGE_CORRECTION);
 		setCreativeTab(AltEnergy.tabsAE);
-		this.setMaxStackSize(64);
+		setMaxStackSize(64);
 	}
 
 	@Override

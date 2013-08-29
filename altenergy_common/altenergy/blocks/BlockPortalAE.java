@@ -149,13 +149,13 @@ public class BlockPortalAE extends BlockPortal {
 			}
 		}
 	}
-	
-	public void onEntityCollidedWithBlock(World world, int par2, int par3, int par4, Entity entity)
-    {
-        if (entity.ridingEntity == null && entity.riddenByEntity == null)
-        {
-        	entity.travelToDimension(DimensionIds.TERRA);
-        	//entity.setInPortal();
-        }
-    }
+
+	@Override
+	public void onEntityCollidedWithBlock(World world, int par2, int par3, int par4, Entity entity) {
+
+		if (entity.ridingEntity == null && entity.riddenByEntity == null) {
+			entity.travelToDimension(DimensionIds.TERRA);
+			// entity.setInPortal();
+		}
+	}
 }

@@ -9,7 +9,7 @@ public class ItemStrangeCrystal extends ItemAE {
 	public ItemStrangeCrystal(int id) {
 
 		super(id);
-		this.setCreativeTab(AltEnergy.tabsAE);
-		this.setMaxStackSize(16);
+		setCreativeTab(AltEnergy.tabsAE);
+		setMaxStackSize(16);
 	}
 }

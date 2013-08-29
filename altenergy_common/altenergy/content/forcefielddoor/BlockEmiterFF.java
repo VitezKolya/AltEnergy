@@ -1,24 +1,23 @@
 
 package altenergy.content.forcefielddoor;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import altenergy.AltEnergy;
 import altenergy.core.misc.BlockContainerAE;
-import altenergy.lib.Reference;
 import altenergy.lib.Strings;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockEmiterFF extends BlockContainerAE {
 
 	public BlockEmiterFF(int id) {
 
 		super(id, Material.iron);
-		this.setCreativeTab(AltEnergy.tabsAE);
-		this.setUnlocalizedName(Strings.BLOCK_EMITER_FF);
+		setCreativeTab(AltEnergy.tabsAE);
+		setUnlocalizedName(Strings.BLOCK_EMITER_FF);
 	}
 
 	@Override
@@ -32,6 +31,7 @@ public class BlockEmiterFF extends BlockContainerAE {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister iconRegister) {
 
-		//iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + Strings.BLOCK_EMITER_FF);
+		// iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" +
+		// Strings.BLOCK_EMITER_FF);
 	}
 }

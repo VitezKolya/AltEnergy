@@ -61,11 +61,30 @@ public class TileControllerPC extends TileControllerBase {
 	 * 
 	 * @param level
 	 */
-	public void changeOutputLevel(int level) {
+	public void setOutputLevel(float level) {
 
 		if (isLinked) {
 			if (controlled instanceof TilePowerCoreBase) {
 				((TilePowerCoreBase) controlled).setOutputLevel(level);
+			}
+		}
+	}
+
+	public float getOutputLevel() {
+
+		if (isLinked) {
+			if (controlled instanceof TilePowerCoreBase) {
+				return ((TilePowerCoreBase) controlled).getOutputLevel();
+			}
+		}
+		return 0;
+	}
+
+	public void vent() {
+
+		if (isLinked) {
+			if (controlled instanceof TilePowerCoreBase) {
+				((TilePowerCoreBase) controlled).state = PowerCoreState.Vent;
 			}
 		}
 	}
@@ -92,16 +111,18 @@ public class TileControllerPC extends TileControllerBase {
 			for (int y = -linkRangeY; y < linkRangeY; y++) {
 				for (int z = -linkRangeZ; z < linkRangeZ; z++) {
 
-					tileEntity = worldObj.getBlockTileEntity(xCoord +x, yCoord + y, zCoord + z);
-					if(tileEntity != null) {
+					tileEntity = worldObj.getBlockTileEntity(xCoord + x, yCoord + y, zCoord + z);
+					if (tileEntity != null) {
 						System.out.println(tileEntity);
-						System.out.println("x: " + (tileEntity.xCoord + x) + " y: " + (tileEntity.yCoord + y) + " z: " + (tileEntity.zCoord + z));
+						System.out.println("x: " + (tileEntity.xCoord + x) + " y: " + (tileEntity.yCoord + y) + " z: "
+								+ (tileEntity.zCoord + z));
 					}
 					if (tileEntity instanceof TilePowerCoreBase) {
 						System.out.println("Found a powercore does it have a link already?");
 						if (!((TilePowerCoreBase) tileEntity).isLinked()) {
 							System.out.println("Powercore doesn't havea a link");
-							System.out.printf("TileControllerBase: Linking controller at (%d, %d, %d) with powercore at (%d, %d, %d)\n",
+							System.out
+									.printf("TileControllerBase: Linking controller at (%d, %d, %d) with powercore at (%d, %d, %d)\n",
 											xCoord, yCoord, zCoord, tileEntity.xCoord, tileEntity.yCoord,
 											tileEntity.zCoord);
 							controlled = tileEntity;
@@ -120,12 +141,12 @@ public class TileControllerPC extends TileControllerBase {
 		System.out.println("No powercores found");
 		return false;
 	}
-	
+
 	@Override
 	public void clearLink() {
 
 		System.out.printf("Controller: Unlinking controller at (%d, %d, %d) from target\n", xCoord, yCoord, zCoord);
-		((TilePowerCoreBase)controlled).clearLink();
+		((TilePowerCoreBase) controlled).clearLink();
 		controlled = null;
 		isLinked = false;
 		markBlockForUpdate();

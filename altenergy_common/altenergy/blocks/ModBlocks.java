@@ -11,6 +11,7 @@ import altenergy.lib.Strings;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
+
 	public static Block granite;
 	public static Block graniteBrick;
 	public static Block strangeCrystalOre;

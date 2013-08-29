@@ -1,3 +1,4 @@
+
 package altenergy.client.model;
 
 /**
@@ -10,85 +11,90 @@ package altenergy.client.model;
  */
 import java.util.Random;
 
-import altenergy.lib.Models;
 import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.client.model.IModelCustom;
-
+import altenergy.lib.Models;
 
 public class ModelEnergyBusway {
-	
-	public boolean connections[] = {false,false,false,false,false,false};
-		
+
+	public boolean connections[] = {
+			false, false, false, false, false, false
+	};
+
 	private IModelCustom modelBusway;
-		
+
 	public ModelEnergyBusway() {
+
 		modelBusway = AdvancedModelLoader.loadModel(Models.BUSWAY);
 	}
-	
+
 	private int random(int maxNum) {
 
 		Random randNum = new Random();
 		return randNum.nextInt(maxNum);
 	}
-	
+
 	public void setConnections(boolean[] connections) {
+
 		this.connections = connections;
 	}
-	
+
 	public void render() {
-		this.modelBusway.renderAll();
+
+		modelBusway.renderAll();
 	}
-	
+
 	public void renderSides(int numSides) {
+
 		switch (numSides) {
 			case 0:
 				renderPart("BuswayNone");
 				break;
 			case 1:
-				if(connections[0]) {
+				if (connections[0]) {
 					renderPart("BuswaySingleVertEndA");
-				} else if(connections[1]) {
+				} else if (connections[1]) {
 					renderPart("BuswaySingleVertEndB");
-				} else if(connections[2]) {
+				} else if (connections[2]) {
 					renderPart("BuswaySingleHorzEndA");
-				} else if(connections[3]) {
+				} else if (connections[3]) {
 					renderPart("BuswaySingleHorzEndB");
-				} else if(connections[4]) {
+				} else if (connections[4]) {
 					renderPart("BuswaySingleHorzEndC");
-				} else if(connections[5]) {
+				} else if (connections[5]) {
 					renderPart("BuswaySingleHorzEndD");
 				}
 				break;
 			case 2:
-				if(connections[0] && connections[1]) {
+				if (connections[0] && connections[1]) {
 					renderPart("BuswayStrightConnectionC");
-				} else if(connections[0] && connections[2]) {
+				} else if (connections[0] && connections[2]) {
 					renderPart("BuswayConnectionF");
 					renderPart("BuswaySingleHorzEndC");
-				} else if(connections[0] && connections[3]) {
+				} else if (connections[0] && connections[3]) {
 					renderPart("BuswayConnectionF");
 					renderPart("BuswaySingleHorzEndA");
-				} else if(connections[0] && connections[4]) {
+				} else if (connections[0] && connections[4]) {
 					renderPart("BuswayConnectionF");
 					renderPart("BuswaySingleHorzEndB");
-				} else if(connections[0] && connections[5]) {
+				} else if (connections[0] && connections[5]) {
 					renderPart("BuswayConnectionF");
 					renderPart("BuswaySingleHorzEndD");
-				} else if(connections[1] && connections[2]) {
+				} else if (connections[1] && connections[2]) {
 					renderPart("BuswayConnectionE");
 					renderPart("BuswaySingleHorzEndC");
-				} else if(connections[1] && connections[3]) {
+				} else if (connections[1] && connections[3]) {
 					renderPart("BuswayConnectionE");
 					renderPart("BuswaySingleHorzEndA");
-				} else if(connections[1] && connections[4]) {
+				} else if (connections[1] && connections[4]) {
 					renderPart("BuswayConnectionE");
 					renderPart("BuswaySingleHorzEndB");
-				} else if(connections[1] && connections[5]) {
+				} else if (connections[1] && connections[5]) {
 					renderPart("BuswayConnectionE");
 					renderPart("BuswaySingleHorzEndD");
-				} else if(connections[2] && connections[3]) {
+				} else if (connections[2] && connections[3]) {
 					renderPart("BuswayStrightConnectionA");
-				} else if(connections[2] && connections[4]) {
+				} else if (connections[2] && connections[4]) {
 					if (random(1) == 0) {
 						renderPart("BuswayConnectionA");
 						renderPart("BuswayJunctionConnectionEndC");
@@ -96,7 +102,7 @@ public class ModelEnergyBusway {
 						renderPart("BuswayConnectionC");
 						renderPart("BuswayJunctionConnectionEndDA");
 					}
-				} else if(connections[2] && connections[5]) {
+				} else if (connections[2] && connections[5]) {
 					if (random(1) == 0) {
 						renderPart("BuswayConnectionD");
 						renderPart("BuswayJunctionConnectionEndA");
@@ -104,28 +110,32 @@ public class ModelEnergyBusway {
 						renderPart("BuswayConnectionA");
 						renderPart("BuswayJunctionConnectionEndD");
 					}
-				} else if(connections[3] && connections[4]) {
+				} else if (connections[3] && connections[4]) {
 					renderPart("BuswayConnectionB");
 					renderPart("BuswayJunctionConnectionEndD");
-				} else if(connections[3] && connections[5]) {
+				} else if (connections[3] && connections[5]) {
 					renderPart("BuswayConnectionD");
 					renderPart("BuswayJunctionConnectionEndB");
-				} else if(connections[4] && connections[5]) {
+				} else if (connections[4] && connections[5]) {
 					renderPart("BuswayStrightConnectionB");
 				}
 				break;
 			case 3:
-				if (connections[0] && connections[1] && connections[2] && !connections[3] && !connections[4] && !connections[5]) {
+				if (connections[0] && connections[1] && connections[2] && !connections[3] && !connections[4]
+						&& !connections[5]) {
 					renderPart("BuswayJunctionConnectionEndA");
 					renderPart("BuswayStrightConnectionC");
 					//
-				} else if (connections[0] && connections[1] && !connections[2] && connections[3] && !connections[4] && !connections[5]) {
+				} else if (connections[0] && connections[1] && !connections[2] && connections[3] && !connections[4]
+						&& !connections[5]) {
 					renderPart("BuswayJunctionConnectionEndB");
 					renderPart("BuswayStrightConnectionC");
-				} else if (connections[0] && connections[1] && !connections[2] && !connections[3] && connections[4] && !connections[5]) {
+				} else if (connections[0] && connections[1] && !connections[2] && !connections[3] && connections[4]
+						&& !connections[5]) {
 					renderPart("BuswayJunctionConnectionEndC");
 					renderPart("BuswayStrightConnectionC");
-				} else if (connections[0] && connections[1] && !connections[2] && !connections[3] && !connections[4] && connections[5]) {
+				} else if (connections[0] && connections[1] && !connections[2] && !connections[3] && !connections[4]
+						&& connections[5]) {
 					renderPart("BuswayJunctionConnectionEndD");
 					renderPart("BuswayStrightConnectionC");
 				} else if (connections[0] && connections[2] && connections[3]) {
@@ -414,33 +424,27 @@ public class ModelEnergyBusway {
 				}
 				break;
 			case 5:
-				if (connections[0] && connections[1] && connections[2] && connections[3]
-						&& connections[4]) {
+				if (connections[0] && connections[1] && connections[2] && connections[3] && connections[4]) {
 					renderPart("BuswayStrightConnectionC");
 					renderPart("BuswayStrightConnectionA");
 					renderPart("BuswayConnectionC");
-				} else if (connections[0] && connections[1] && connections[2] && connections[3]
-						&& connections[5]) {
+				} else if (connections[0] && connections[1] && connections[2] && connections[3] && connections[5]) {
 					renderPart("BuswayStrightConnectionC");
 					renderPart("BuswayStrightConnectionA");
 					renderPart("BuswayConnectionD");
-				} else if (connections[0] && connections[1] && connections[2] && connections[4]
-						&& connections[5]) {
+				} else if (connections[0] && connections[1] && connections[2] && connections[4] && connections[5]) {
 					renderPart("BuswayStrightConnectionC");
 					renderPart("BuswayStrightConnectionB");
 					renderPart("BuswayConnectionA");
-				} else if (connections[0] && connections[1] && connections[3] && connections[4]
-						&& connections[5]) {
+				} else if (connections[0] && connections[1] && connections[3] && connections[4] && connections[5]) {
 					renderPart("BuswayStrightConnectionC");
 					renderPart("BuswayStrightConnectionB");
 					renderPart("BuswayConnectionB");
-				} else if (connections[0] && connections[2] && connections[3] && connections[4]
-						&& connections[5]) {
+				} else if (connections[0] && connections[2] && connections[3] && connections[4] && connections[5]) {
 					renderPart("BuswayStrightConnectionA");
 					renderPart("BuswayStrightConnectionB");
 					renderPart("BuswayConnectionF");
-				} else if (connections[1] && connections[2] && connections[3] && connections[4]
-						&& connections[5]) {
+				} else if (connections[1] && connections[2] && connections[3] && connections[4] && connections[5]) {
 					renderPart("BuswayStrightConnectionC");
 					renderPart("BuswayStrightConnectionB");
 					renderPart("BuswayConnectionE");
@@ -453,8 +457,9 @@ public class ModelEnergyBusway {
 				break;
 		}
 	}
-	
+
 	public void renderPart(String partName) {
-		this.modelBusway.renderPart(partName);
+
+		modelBusway.renderPart(partName);
 	}
 }

@@ -12,6 +12,7 @@ import altenergy.lib.Strings;
 import cpw.mods.fml.common.FMLLog;
 
 public class ConfigurationHandler {
+
 	public static Configuration configuration;
 
 	public static final String CATEGORY_GRAPHICS = "graphics";
@@ -98,17 +99,24 @@ public class ConfigurationHandler {
 			/* Audio configs */
 
 			/* Item configs */
-			
+
 			ItemIds.ITEMS = configuration.getItem("items", ItemIds.ITEMS_DEFAULT).getInt(ItemIds.ITEMS_DEFAULT);
-			ItemIds.ITEMS_3D = configuration.getItem("items3d", ItemIds.ITEMS_3D_DEFAULT).getInt(ItemIds.ITEMS_3D_DEFAULT);
+			ItemIds.ITEMS_3D = configuration.getItem("items3d", ItemIds.ITEMS_3D_DEFAULT).getInt(
+					ItemIds.ITEMS_3D_DEFAULT);
 			ItemIds.GEMS = configuration.getItem("gemItems", ItemIds.GEMS_DEFAULT).getInt(ItemIds.GEMS_DEFAULT);
 			ItemIds.DUSTS = configuration.getItem("dustItems", ItemIds.DUSTS_DEFAULT).getInt(ItemIds.DUSTS_DEFAULT);
-			ItemIds.ENERGY_CRYSTAL_TINY = configuration.getItem(Strings.ENERGY_CRYSTAL_TINY, ItemIds.ENERGY_CRYSTAL_TINY_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_TINY_DEFAULT);
-			ItemIds.ENERGY_CRYSTAL_SMALL = configuration.getItem(Strings.ENERGY_CRYSTAL_SMALL, ItemIds.ENERGY_CRYSTAL_SMALL_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_SMALL_DEFAULT);
-			ItemIds.ENERGY_CRYSTAL_MEDIUM = configuration.getItem(Strings.ENERGY_CRYSTAL_MEDIUM, ItemIds.ENERGY_CRYSTAL_MEDIUM_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_MEDIUM_DEFAULT);
-			ItemIds.ENERGY_CRYSTAL_LARGE = configuration.getItem(Strings.ENERGY_CRYSTAL_LARGE, ItemIds.ENERGY_CRYSTAL_LARGE_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_LARGE_DEFAULT);
-			ItemIds.ENERGY_CRYSTAL_HUGE = configuration.getItem(Strings.ENERGY_CRYSTAL_HUGE, ItemIds.ENERGY_CRYSTAL_HUGE_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_HUGE_DEFAULT);
-			ItemIds.ENERGY_CRYSTAL_GIGANTIC = configuration.getItem(Strings.ENERGY_CRYSTAL_GIGANTIC, ItemIds.ENERGY_CRYSTAL_GIGANTIC_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_GIGANTIC_DEFAULT);
+			ItemIds.ENERGY_CRYSTAL_TINY = configuration.getItem(Strings.ENERGY_CRYSTAL_TINY,
+					ItemIds.ENERGY_CRYSTAL_TINY_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_TINY_DEFAULT);
+			ItemIds.ENERGY_CRYSTAL_SMALL = configuration.getItem(Strings.ENERGY_CRYSTAL_SMALL,
+					ItemIds.ENERGY_CRYSTAL_SMALL_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_SMALL_DEFAULT);
+			ItemIds.ENERGY_CRYSTAL_MEDIUM = configuration.getItem(Strings.ENERGY_CRYSTAL_MEDIUM,
+					ItemIds.ENERGY_CRYSTAL_MEDIUM_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_MEDIUM_DEFAULT);
+			ItemIds.ENERGY_CRYSTAL_LARGE = configuration.getItem(Strings.ENERGY_CRYSTAL_LARGE,
+					ItemIds.ENERGY_CRYSTAL_LARGE_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_LARGE_DEFAULT);
+			ItemIds.ENERGY_CRYSTAL_HUGE = configuration.getItem(Strings.ENERGY_CRYSTAL_HUGE,
+					ItemIds.ENERGY_CRYSTAL_HUGE_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_HUGE_DEFAULT);
+			ItemIds.ENERGY_CRYSTAL_GIGANTIC = configuration.getItem(Strings.ENERGY_CRYSTAL_GIGANTIC,
+					ItemIds.ENERGY_CRYSTAL_GIGANTIC_DEFAULT).getInt(ItemIds.ENERGY_CRYSTAL_GIGANTIC_DEFAULT);
 
 			/* Block configs */
 			BlockIds.GRANITE = configuration.getBlock(Strings.BLOCK_GRANITE_NAME, BlockIds.GRANITE_DEFAULT).getInt(
@@ -131,8 +139,11 @@ public class ConfigurationHandler {
 							BlockIds.CONTROLLER_PC_DEFAULT);
 			BlockIds.EMITER_FF = configuration.getBlock(Strings.BLOCK_EMITER_FF, BlockIds.EMITER_FF_DEFAULT).getInt(
 					BlockIds.EMITER_FF_DEFAULT);
-			BlockIds.ENERGY_BUSWAY = configuration.getBlock(Strings.BLOCK_ENERGY_BUSWAY,
-					BlockIds.ENERGY_BUSWAY_DEFAULT).getInt(BlockIds.ENERGY_BUSWAY_DEFAULT);
+			BlockIds.ENERGY_BUSWAY = configuration
+					.getBlock(Strings.BLOCK_ENERGY_BUSWAY, BlockIds.ENERGY_BUSWAY_DEFAULT).getInt(
+							BlockIds.ENERGY_BUSWAY_DEFAULT);
+			BlockIds.ENERGY_CABLE = configuration.getBlock(Strings.BLOCK_ENERGY_CABLE, BlockIds.ENERGY_CABLE_DEFAULT)
+					.getInt(BlockIds.ENERGY_CABLE_DEFAULT);
 			BlockIds.POWER_REGULATOR = configuration.getBlock(Strings.BLOCK_POWER_REGULATOR,
 					BlockIds.POWER_REGULATOR_DEFAULT).getInt(BlockIds.POWER_REGULATOR_DEFAULT);
 			BlockIds.MINI_POWERCORE = configuration.getBlock(Strings.BLOCK_MINI_POWER_CORE,

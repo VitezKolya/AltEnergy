@@ -1,8 +1,6 @@
+
 package altenergy.content.scalertransmiter;
 
-import com.google.common.io.ByteArrayDataInput;
-
-import altenergy.core.misc.IWirelessPowerMachine;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -11,6 +9,9 @@ import net.minecraft.network.packet.Packet250CustomPayload;
 import net.minecraftforge.common.ForgeDirection;
 import universalelectricity.prefab.network.IPacketReceiver;
 import universalelectricity.prefab.tile.TileEntityElectricityStorage;
+import altenergy.core.misc.IWirelessPowerMachine;
+
+import com.google.common.io.ByteArrayDataInput;
 
 public class TileScalerEnergyTransmiter extends TileEntityElectricityStorage implements IWirelessPowerMachine, IPacketReceiver, IInventory {
 
@@ -60,7 +61,7 @@ public class TileScalerEnergyTransmiter extends TileEntityElectricityStorage imp
 	public void setInventorySlotContents(int i, ItemStack itemstack) {
 
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -95,14 +96,14 @@ public class TileScalerEnergyTransmiter extends TileEntityElectricityStorage imp
 	public void openChest() {
 
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void closeChest() {
 
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -117,7 +118,7 @@ public class TileScalerEnergyTransmiter extends TileEntityElectricityStorage imp
 			EntityPlayer player, ByteArrayDataInput dataStream) {
 
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -131,7 +132,7 @@ public class TileScalerEnergyTransmiter extends TileEntityElectricityStorage imp
 	public void setFrequency(byte newFrequency) {
 
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -152,14 +153,14 @@ public class TileScalerEnergyTransmiter extends TileEntityElectricityStorage imp
 	public void removeJoules(double outputWatts) {
 
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void setPlayer(EntityPlayer player) {
 
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public String getOwningPlayer() {

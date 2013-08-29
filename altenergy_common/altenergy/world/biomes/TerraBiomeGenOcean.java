@@ -9,8 +9,8 @@ public class TerraBiomeGenOcean extends BiomeGenBase {
 
 		super(par1);
 		spawnableCreatureList.clear();
-        setBiomeName("Ocean");
-        setColor(112);
-        setMinMaxHeight(-1.0F, 0.4F);
+		setBiomeName("Ocean");
+		setColor(112);
+		setMinMaxHeight(-1.0F, 0.4F);
 	}
 }

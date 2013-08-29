@@ -2,6 +2,7 @@
 package altenergy.lib;
 
 public class Commands {
+
 	public static final String ALL = "all";
 	public static final String SELF = "self";
 	public static final String ON = "on";

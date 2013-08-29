@@ -32,5 +32,5 @@ public class BlockIds {
 	public static int ENERGY_BUSWAY;
 	public static int MINI_POWERCORE;
 	public static int PORTAL;
-	
+
 }

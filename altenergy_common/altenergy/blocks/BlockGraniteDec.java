@@ -19,10 +19,10 @@ public class BlockGraniteDec extends BlockAE {
 
 		super(id, Material.rock);
 
-		this.setCreativeTab(AltEnergy.tabsAE);
-		this.setUnlocalizedName(Strings.BLOCK_GRANITEDEC_NAME);
-		this.setHardness(20.0F);
-		this.setResistance(4500.0F);
+		setCreativeTab(AltEnergy.tabsAE);
+		setUnlocalizedName(Strings.BLOCK_GRANITEDEC_NAME);
+		setHardness(20.0F);
+		setResistance(4500.0F);
 	}
 
 	@Override

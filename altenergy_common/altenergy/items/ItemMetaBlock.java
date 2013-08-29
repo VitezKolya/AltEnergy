@@ -10,22 +10,23 @@ public class ItemMetaBlock extends ItemBlock {
 	public ItemMetaBlock(int id) {
 
 		super(id);
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
+		setMaxDamage(0);
+		setHasSubtypes(true);
 	}
 
 	@Override
 	public String getUnlocalizedName(ItemStack itemstack) {
 
-		
 		return this.getUnlocalizedName() + Strings.BLOCK_GRANITE_BRICKS_SUBNAMES[itemstack.getItemDamage()];
-		/*for (int i = 0; i < Strings.BLOCK_META_NAMES.length; i++) {
-			if (i == this.getDamage(itemstack)) {
-				return this.getUnlocalizedName() + Strings.BLOCK_META_NAMES[i];
-			}
-		}
-
-		return "";*/
+		/*
+		 * for (int i = 0; i < Strings.BLOCK_META_NAMES.length; i++) {
+		 * if (i == this.getDamage(itemstack)) {
+		 * return this.getUnlocalizedName() + Strings.BLOCK_META_NAMES[i];
+		 * }
+		 * }
+		 * 
+		 * return "";
+		 */
 	}
 
 	public int getMeta(int meta) {

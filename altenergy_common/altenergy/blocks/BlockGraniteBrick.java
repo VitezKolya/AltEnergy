@@ -22,8 +22,8 @@ public class BlockGraniteBrick extends BlockAE {
 	public BlockGraniteBrick(int id) {
 
 		super(id, Material.rock);
-		this.setUnlocalizedName(Strings.BLOCK_GRANITE_BRICKS_NAME);
-		this.setCreativeTab(AltEnergy.tabsAE);
+		setUnlocalizedName(Strings.BLOCK_GRANITE_BRICKS_NAME);
+		setCreativeTab(AltEnergy.tabsAE);
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class BlockGraniteBrick extends BlockAE {
 		icons = new Icon[Strings.BLOCK_GRANITE_BRICKS_SUBNAMES.length];
 
 		for (int meta = 0; meta < icons.length; meta++) {
-			icons[meta] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName2()
+			icons[meta] = iconRegister.registerIcon(Reference.MOD_ID + ":" + getUnlocalizedName2()
 					+ Strings.BLOCK_GRANITE_BRICKS_SUBNAMES[meta]);
 		}
 	}
